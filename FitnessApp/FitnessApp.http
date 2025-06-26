@@ -1,0 +1,75 @@
+### 1. Try to register a new user (requires Authorization)
+POST http://localhost:5079/users/register
+Content-Type: application/json
+
+{
+  "username": "newuser",
+  "password": "Test1234!"
+}
+
+### 2. Try to login (requires Authorization)
+POST http://localhost:5079/users/login
+Content-Type: application/json
+
+{
+  "username": "newuser",
+  "password": "Test1234!"
+}
+
+### 3. Get JWT token (simulate login without auth for testing purposes)
+# This endpoint normally requires [Authorize], so testing token retrieval can be tricky if auth blocks it.
+# You might want to temporarily remove [Authorize] on login and register to get tokens first.
+# Then re-add [Authorize] later.
+
+# Or, for local testing, comment out [Authorize] on login/register temporarily.
+
+### 4. Get all workouts (requires Authorization and token)
+GET http://localhost:5079/workouts
+Authorization: Bearer {{jwt_token}}
+
+### 5. Get workout by Id
+GET http://localhost:5079/workouts/1
+Authorization: Bearer {{jwt_token}}
+
+### 6. Create a workout
+POST http://localhost:5079/workouts
+Authorization: Bearer {{jwt_token}}
+Content-Type: application/json
+
+{
+  "name": "Morning Routine",
+  "description": "Workout for mornings",
+  "workoutExercises": []
+}
+
+### 7. Add exercise to workout
+POST http://localhost:5079/workouts/1/exercises
+Authorization: Bearer {{jwt_token}}
+Content-Type: application/json
+
+{
+  "id": 101,
+  "workoutId": 1,
+  "exerciseId": 5,
+  "order": 1,
+  "sets": 3,
+  "reps": 12,
+  "weight": 0,
+  "notes": "Bodyweight only"
+}
+
+### 8. Get exercises by workout
+GET http://localhost:5079/workouts/1/exercises
+Authorization: Bearer {{jwt_token}}
+
+### 9. Get specific exercise in workout
+GET http://localhost:5079/workouts/1/exercises/101
+Authorization: Bearer {{jwt_token}}
+
+### 10. Delete exercise from workout
+DELETE http://localhost:5079/workouts/1/exercises/101
+Authorization: Bearer {{jwt_token}}
+
+### 11. Delete workout
+DELETE http://localhost:5079/workouts/1
+Authorization: Bearer {{jwt_token}}
