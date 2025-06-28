@@ -19,7 +19,8 @@ namespace FitnessApp.Interfaces.Services
         /// <param name="workoutId">The id of the workout to get.</param>
         /// <param name="userId">The id of the user.</param>
         /// <returns>Task of nullable <see cref="Workout"/> object.</returns>
-        Task<Workout?> GetWorkoutByIdAsync(string workoutId, string userId);
+        Task<WorkoutResponse?> GetWorkoutByIdAsync(string workoutId, string userId);
+
 
         /// <summary>
         /// Will create a new workout for a user.
@@ -27,7 +28,7 @@ namespace FitnessApp.Interfaces.Services
         /// <param name="workout">The workout to create.</param>
         /// <param name="userId">The id of the user.</param>
         /// <returns>Task of workout object created.</returns>
-        Task<Workout> CreateWorkoutAsync(CreateWorkoutRequest workout, string userId);
+        Task<WorkoutResponse> CreateWorkoutAsync(CreateWorkoutRequest workout, string userId);
 
         /// <summary>
         /// Updates a current workout with a new workout.

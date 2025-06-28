@@ -25,10 +25,18 @@ namespace FitnessApp.Services
             return workouts.Select(w => w.ToResponse());
         }
 
-        public Task<Workout?> GetWorkoutByIdAsync(string workoutId, string userId) =>
-            _workoutsRepo.GetByIdAsync(workoutId, userId);
+        public async Task<WorkoutResponse?> GetWorkoutByIdAsync(string workoutId, string userId)
+        {
+            var workout = await _workoutsRepo.GetByIdAsync(workoutId, userId);
+            if (workout == null)
+            {
+                return null;
+            }
+            var response = workout.ToResponse();
+            return response;
+        }
 
-        public Task<Workout> CreateWorkoutAsync(CreateWorkoutRequest request, string userId)
+        public async Task<WorkoutResponse> CreateWorkoutAsync(CreateWorkoutRequest request, string userId)
         {
             var workout = new Workout
             {
@@ -41,7 +49,10 @@ namespace FitnessApp.Services
                 WorkoutExercises = new List<WorkoutExercise>()
             };
 
-            return _workoutsRepo.CreateAsync(workout, userId);
+            var returnedWorkout = await _workoutsRepo.CreateAsync(workout, userId);
+            var response = returnedWorkout.ToResponse();
+            return response;
+
         }
         public Task<bool> UpdateWorkoutAsync(string workoutId, Workout workout, string userId) =>
             _workoutsRepo.UpdateAsync(workoutId, workout, userId);
