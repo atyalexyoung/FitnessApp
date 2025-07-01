@@ -42,6 +42,7 @@ namespace FitnessApp.Shared.Mappers
                 Sets = e.Sets,
                 Reps = e.Reps,
                 Weight = e.Weight,
+                Duration = e.Duration,
                 Order = e.Order
             };
         }

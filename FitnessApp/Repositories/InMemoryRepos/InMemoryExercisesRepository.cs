@@ -44,7 +44,7 @@ namespace FitnessApp.Repositories.InMemoryRepos
             return Task.FromResult(filtered);
         }
 
-        public Task<Exercise?> GetByIdAsync(int id)
+        public Task<Exercise?> GetByIdAsync(string id)
         {
             var result = _exercises.FirstOrDefault(e => e.Id == id);
             return Task.FromResult(result);

@@ -6,6 +6,6 @@ namespace FitnessApp.Interfaces.Repositories
     {
         Task<User?> GetByIdAsync(string id);
         Task<User?> GetByUsernameAsync(string username);
-        Task AddAsync(User user);
+        Task<bool> AddAsync(User user);
     }
 }

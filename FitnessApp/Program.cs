@@ -1,8 +1,10 @@
+using FitnessApp.Data;
 using FitnessApp.Interfaces.Repositories;
 using FitnessApp.Interfaces.Services;
 using FitnessApp.Repositories.InMemoryRepos;
 using FitnessApp.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
@@ -64,6 +66,9 @@ namespace FitnessApp
             // https://learn.microsoft.com/aspnet/core/security/authentication/jwtbearer
             // https://learn.microsoft.com/aspnet/core/security/authentication/social/oidc
 
+            // UPDATE:
+            // NOW WILL BE CONSIDERING AND MOST LIKELY USING FIREBASE AUTH FOR AUTHENTICATION
+
 
 
             // authentication setup
@@ -110,6 +115,16 @@ namespace FitnessApp
                             new string[] {}
                         }
                     });
+            });
+
+            // database setup.
+            var env = builder.Environment.EnvironmentName;
+            builder.Services.AddDbContext<FitnessAppDbContext>(options =>
+            {
+                var connStr = builder.Configuration.GetConnectionString(
+                    env == "Development" ? "DevConnection" : "ProdConnection");
+
+                options.UseNpgsql(connStr); // or UseSqlServer, UseSqlite, etc.
             });
 
             // services

@@ -10,7 +10,7 @@ namespace FitnessApp.Interfaces.Repositories
             List<BodyParts.BodyPart>? bodyParts = null,
             List<ExerciseType.ExerciseTypeTag>? exerciseTags = null);
 
-        Task<Exercise?> GetByIdAsync(int id);
+        Task<Exercise?> GetByIdAsync(string id);
 
     }
 }

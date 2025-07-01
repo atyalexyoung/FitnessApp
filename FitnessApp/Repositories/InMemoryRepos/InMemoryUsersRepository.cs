@@ -6,6 +6,12 @@ namespace FitnessApp.Repositories.InMemoryRepos
     public class InMemoryUsersRepository : IUsersRepository
     {
         private readonly List<User> _users = [];
+        private readonly ILogger<InMemoryExercisesRepository> _logger;
+
+        public InMemoryUsersRepository(ILogger<InMemoryExercisesRepository> logger)
+        {
+            _logger = logger;
+        }
 
         public Task<User?> GetByIdAsync(string id)
         {
@@ -17,10 +23,19 @@ namespace FitnessApp.Repositories.InMemoryRepos
             return Task.FromResult(_users.FirstOrDefault(u => u.UserName == username));
         }
 
-        public Task AddAsync(User user)
+        public Task<bool> AddAsync(User user)
         {
-            _users.Add(user);
-            return Task.CompletedTask;
+            try
+            {
+                _users.Add(user);
+                _logger.LogTrace("User: {username}, successfully added in {class} at {time}", user.UserName, nameof(AddAsync), DateTime.UtcNow);
+                return Task.FromResult(true);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogTrace("Failed to add user: {username}, in {class} at {time}", user.UserName, nameof(AddAsync), DateTime.UtcNow);
+                return Task.FromResult(false);
+            }
         }
     }
 }

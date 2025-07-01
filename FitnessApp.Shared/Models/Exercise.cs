@@ -4,8 +4,8 @@ namespace FitnessApp.Shared.Models
 {
     public class Exercise
     {
-        public int Id { get; set; }
-        public required string Name { get; set; }
+        public string Id { get; set; } = null!;
+        public string Name { get; set; } = null!;
         public string? Description { get; set; }
         public List<ExerciseType.ExerciseTypeTag> ExerciseTags { get; set; } = [];
         public List<BodyParts.BodyPart> BodyPart { get; set; } = [];

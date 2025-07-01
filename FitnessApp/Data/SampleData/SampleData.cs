@@ -34,8 +34,8 @@ public static class SampleData
 
     private static List<Workout> CreateInitialWorkouts()
     {
-        var pushup = new Exercise { Id = 1, Name = "Push-Up" };
-        var squat = new Exercise { Id = 2, Name = "Squat" };
+        var pushup = new Exercise { Id = "1", Name = "Push-Up" };
+        var squat = new Exercise { Id = "2", Name = "Squat" };
 
         return new List<Workout>
         {
@@ -72,8 +72,8 @@ public static class SampleData
     {
         return new List<Exercise>
         {
-            new() { Id = 1, Name = "Push-Up", Description = "A bodyweight exercise" },
-            new() { Id = 2, Name = "Squat", Description = "A leg strength exercise" },
+            new() { Id = "1", Name = "Push-Up", Description = "A bodyweight exercise" },
+            new() { Id = "2", Name = "Squat", Description = "A leg strength exercise" },
             // Add more sample exercises...
         };
     }
