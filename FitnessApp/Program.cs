@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using System;
 using System.Text;
 
 namespace FitnessApp
@@ -118,14 +119,10 @@ namespace FitnessApp
             });
 
             // database setup.
-            var env = builder.Environment.EnvironmentName;
-            builder.Services.AddDbContext<FitnessAppDbContext>(options =>
-            {
-                var connStr = builder.Configuration.GetConnectionString(
-                    env == "Development" ? "DevConnection" : "ProdConnection");
+            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
-                options.UseNpgsql(connStr); // or UseSqlServer, UseSqlite, etc.
-            });
+            builder.Services.AddDbContext<FitnessAppDbContext>(options =>
+                options.UseNpgsql(connectionString));
 
             // services
             builder.Services.AddScoped<IWorkoutsService, WorkoutsService>();

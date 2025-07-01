@@ -10,13 +10,17 @@
 *.userosscache
 *.sln.docstates
 
+# environment files
+.env
+.env.*
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
 # Mono auto generated files
 mono_crash.*
 
-# Build results
+# Build resultss
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
