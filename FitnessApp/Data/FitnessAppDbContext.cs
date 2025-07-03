@@ -3,12 +3,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FitnessApp.Data
 {
-    public class FitnessAppDbContext : DbContext
+    public class FitnessAppDbContext(DbContextOptions<FitnessAppDbContext> options) : DbContext(options)
     {
-        public FitnessAppDbContext(DbContextOptions<FitnessAppDbContext> options) : base(options)
-        {
-        }
-
         public DbSet<User> Users { get; set; }
         public DbSet<Workout> Workouts { get; set; }
         public DbSet<WorkoutExercise> WorkoutExercises { get; set; }

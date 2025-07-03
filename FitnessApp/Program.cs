@@ -7,14 +7,13 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using System;
 using System.Text;
 
 namespace FitnessApp
 {
     public static class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -26,12 +25,20 @@ namespace FitnessApp
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
+                // do swagger stuff if in development.
                 app.UseSwagger();
                 app.UseSwaggerUI(options => // UseSwaggerUI is called only in Development.
                 {
                     options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
                     options.RoutePrefix = string.Empty;
                 });
+
+                // seed database with test data if in local development.
+                using var scope = app.Services.CreateScope();
+                var services = scope.ServiceProvider;
+
+                var dbContext = services.GetRequiredService<FitnessAppDbContext>();
+                await DatabaseSeeder.SeedDatabaseAsync(dbContext);
             }
 
             // setup and run app.
@@ -48,7 +55,6 @@ namespace FitnessApp
         /// <param name="builder">The builder to add the services to.</param>
         private static void AddServices(WebApplicationBuilder builder)
         {
-
             // ---------------------------
             // AUTHENTICATION SETUP
             // ---------------------------
@@ -69,8 +75,6 @@ namespace FitnessApp
 
             // UPDATE:
             // NOW WILL BE CONSIDERING AND MOST LIKELY USING FIREBASE AUTH FOR AUTHENTICATION
-
-
 
             // authentication setup
             builder.Services.AddAuthentication(options =>

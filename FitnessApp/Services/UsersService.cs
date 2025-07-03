@@ -122,7 +122,7 @@ namespace FitnessApp.Services
             }
             catch (Exception ex)
             {
-                _logger.LogError("Error when generating JWT");
+                _logger.LogError("Error when generating JWT with exception: {exception}", ex);
                 jwt = default!;
                 return false;
             }

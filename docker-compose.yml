@@ -4,6 +4,9 @@ services:
     build:
       context: .
       dockerfile: FitnessApp/Dockerfile
+    environment:
+      Jwt__Key: ${JWT_KEY}
+      ConnectionStrings__DefaultConnection: ${CONNECTION_STRING}
   postgres:
     image: postgres:15-alpine
     environment:
