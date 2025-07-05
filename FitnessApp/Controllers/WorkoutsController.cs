@@ -1,5 +1,6 @@
 using FitnessApp.Interfaces.Services;
 using FitnessApp.Shared.DTOs.Requests;
+using FitnessApp.Shared.DTOs.Responses;
 using FitnessApp.Shared.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -21,19 +22,42 @@ namespace FitnessApp.Controllers
         }
 
         [Authorize]
-        [HttpGet(Name = "GetAllWorkouts")]
+        [HttpGet("workouts")]
         public async Task<IActionResult> GetAllWorkouts()
         {
             _logger.LogInformation("GET request for all workouts by {user}", UserId);
 
-            var workouts = await _workoutsService.GetAllWorkoutsAsync(UserId);
-            return workouts == null
-                ? NotFound()
-                : Ok(workouts);
+            var result = await _workoutsService.GetAllWorkoutsAsync(UserId);
+            if (result.IsFailure)
+            {
+                _logger.LogWarning("GET for all workouts from user: {user}, was unable to be successfully retrieved with error of: {error}", UserId, result.Error);
+                return NotFound(result.Error);
+            }
+            else
+            {
+                if (result.Value == null)
+                {
+                    _logger.LogWarning("Null value for result when returning all workouts to user: {user}", UserId);
+                    return NotFound("Null workouts.");
+                }
+                else
+                {
+                    if (result.Value is IEnumerable<WorkoutResponse> responses)
+                    {
+                        _logger.LogDebug("Responding to GET request for all workouts from user: {user} with {quantity} workouts", UserId, responses.Count());
+                        return Ok(result.Value);
+                    }
+                    else
+                    {
+                        _logger.LogError("Unexpected type for result.Value in GetAllWorkouts. Actual type: {type}", result.Value.GetType());
+                        return StatusCode(StatusCodes.Status500InternalServerError, "Unexpected error occurred.");
+                    }
+                }
+            }
         }
 
         [Authorize]
-        [HttpGet("{id}", Name = "GetWorkoutById")]
+        [HttpGet("workouts/{id}")]
         public async Task<IActionResult> GetWorkoutById(string id)
         {
             _logger.LogInformation("GET workout by ID of: {workout}, for {user}", id, UserId);
@@ -53,7 +77,7 @@ namespace FitnessApp.Controllers
         }
 
         [Authorize]
-        [HttpPost(Name = "CreateWorkout")]
+        [HttpPost("workouts")]
         public async Task<IActionResult> CreateWorkout([FromBody] CreateWorkoutRequest workoutRequest)
         {
             _logger.LogDebug("POST request to create a workout with name {workoutRequestName} by user: {user}", workoutRequest.Name, UserId);
@@ -63,7 +87,7 @@ namespace FitnessApp.Controllers
         }
 
         [Authorize]
-        [HttpDelete("{id}", Name = "DeleteWorkout")]
+        [HttpDelete("workouts/{id}")]
         public async Task<IActionResult> DeleteWorkout(string id)
         {
             if (await _workoutsService.DeleteWorkoutAsync(id, UserId))
@@ -78,7 +102,7 @@ namespace FitnessApp.Controllers
         }
 
         [Authorize]
-        [HttpGet("{workoutId}/exercises", Name = "GetExercisesByWorkout")]
+        [HttpGet("workouts/{workoutId}/exercises")]
         public async Task<IActionResult> GetExercisesByWorkout(string workoutId)
         {
             var workout = await _workoutsService.GetWorkoutByIdAsync(workoutId, UserId);
@@ -88,7 +112,7 @@ namespace FitnessApp.Controllers
         }
 
         [Authorize]
-        [HttpPost("{workoutId}/exercises")]
+        [HttpPost("workouts/{workoutId}/exercises")]
         public async Task<IActionResult> AddExerciseToWorkout(string workoutId, [FromBody] WorkoutExercise exercise)
         {
             if (exercise == null) return BadRequest();
@@ -100,7 +124,7 @@ namespace FitnessApp.Controllers
         }
 
         [Authorize]
-        [HttpGet("{workoutId}/exercises/{exerciseId}", Name = "GetExerciseInWorkout")]
+        [HttpGet("workouts/{workoutId}/exercises/{exerciseId}")]
         public async Task<IActionResult> GetExerciseInWorkout(string workoutId, string exerciseId)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -110,7 +134,7 @@ namespace FitnessApp.Controllers
         }
 
         [Authorize]
-        [HttpDelete("{workoutId}/exercises/{exerciseId}", Name = "DeleteExerciseFromWorkout")]
+        [HttpDelete("workouts/{workoutId}/exercises/{exerciseId}")]
         public async Task<IActionResult> DeleteExerciseFromWorkout(string workoutId, string exerciseId)
         {
             // try to get workout

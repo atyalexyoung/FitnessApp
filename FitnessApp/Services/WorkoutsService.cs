@@ -25,8 +25,7 @@ namespace FitnessApp.Services
             var workouts = await _workoutsRepo.GetAllAsync(userId);
             if (workouts == null)
             {
-                return Result.Fail<IEnumerable<WorkoutResponse>>("Workouts returned as null.");
-
+                return Result.Fail<IEnumerable<WorkoutResponse>>("Workouts returned as null.", ErrorType.NotFound);
             }
             var responses = workouts.Select(w => w.ToResponse());
             return Result.Ok(responses);
