@@ -24,6 +24,8 @@ namespace FitnessApp.Controllers
         [HttpGet(Name = "GetAllWorkouts")]
         public async Task<IActionResult> GetAllWorkouts()
         {
+            _logger.LogInformation("GET request for all workouts by {user}", UserId);
+
             var workouts = await _workoutsService.GetAllWorkoutsAsync(UserId);
             return workouts == null
                 ? NotFound()
@@ -34,17 +36,28 @@ namespace FitnessApp.Controllers
         [HttpGet("{id}", Name = "GetWorkoutById")]
         public async Task<IActionResult> GetWorkoutById(string id)
         {
+            _logger.LogInformation("GET workout by ID of: {workout}, for {user}", id, UserId);
+
             var workout = await _workoutsService.GetWorkoutByIdAsync(id, UserId);
 
-            return workout == null
-                ? NotFound()
-                : Ok(workout);
+            if (workout == null)
+            {
+                _logger.LogWarning("Could not find workout by id: {id} for user: {user}", id, UserId);
+                return NotFound();
+            }
+            else
+            {
+                _logger.LogDebug("Returning workout with id of: {id} from GET workout by ID for {user}", workout.Id, UserId);
+                return Ok(workout);
+            }
         }
 
         [Authorize]
         [HttpPost(Name = "CreateWorkout")]
         public async Task<IActionResult> CreateWorkout([FromBody] CreateWorkoutRequest workoutRequest)
         {
+            _logger.LogDebug("POST request to create a workout with name {workoutRequestName} by user: {user}", workoutRequest.Name, UserId);
+
             var created = await _workoutsService.CreateWorkoutAsync(workoutRequest, UserId);
             return CreatedAtAction(nameof(GetWorkoutById), new { id = created.Id }, created);
         }
@@ -53,9 +66,15 @@ namespace FitnessApp.Controllers
         [HttpDelete("{id}", Name = "DeleteWorkout")]
         public async Task<IActionResult> DeleteWorkout(string id)
         {
-            return await _workoutsService.DeleteWorkoutAsync(id, UserId)
-                ? NoContent()
-                : NotFound();
+            if (await _workoutsService.DeleteWorkoutAsync(id, UserId))
+            {
+                _logger.LogDebug("Workout with id: {id} was successfully deleted.", id);
+                return NoContent();
+            }
+            else
+            {
+                return NotFound();
+            }
         }
 
         [Authorize]

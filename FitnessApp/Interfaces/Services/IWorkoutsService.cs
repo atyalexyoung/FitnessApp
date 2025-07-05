@@ -1,4 +1,5 @@
-﻿using FitnessApp.Shared.DTOs.Requests;
+﻿using FitnessApp.Helpers;
+using FitnessApp.Shared.DTOs.Requests;
 using FitnessApp.Shared.DTOs.Responses;
 using FitnessApp.Shared.Models;
 
@@ -11,7 +12,7 @@ namespace FitnessApp.Interfaces.Services
         /// </summary>
         /// <param name="userId">The id of the user to get the workout for.</param>
         /// <returns>Task of enumerable of <see cref="Workout"/> objects.</returns>
-        Task<IEnumerable<WorkoutResponse>> GetAllWorkoutsAsync(string userId);
+        Task<Result<IEnumerable<WorkoutResponse>>> GetAllWorkoutsAsync(string userId);
 
         /// <summary>
         /// Will get a workout by id.

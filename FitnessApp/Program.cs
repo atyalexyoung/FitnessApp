@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Serilog;
 using System.Text;
 
 namespace FitnessApp
@@ -16,6 +17,14 @@ namespace FitnessApp
         public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            // setup logging
+            Log.Logger = new LoggerConfiguration()
+                .ReadFrom.Configuration(builder.Configuration)
+                .Enrich.FromLogContext()
+                .CreateLogger();
+
+            builder.Host.UseSerilog();
 
             // Add services to the container.
             builder.Services.AddControllers();
@@ -46,7 +55,15 @@ namespace FitnessApp
             app.UseAuthentication();
             app.UseAuthorization();
             app.MapControllers();
-            app.Run();
+            
+            try
+            {
+                app.Run();
+            }
+            finally
+            {
+                Log.CloseAndFlush();
+            }        
         }
 
         /// <summary>
@@ -144,7 +161,6 @@ namespace FitnessApp
             builder.Services.AddOpenApi();
             // adding swagger support stuff
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
         }
     }
 }

@@ -33,7 +33,7 @@ namespace FitnessApp.Repositories.InMemoryRepos
             }
             catch (Exception ex)
             {
-                _logger.LogTrace("Failed to add user: {username}, in {class} at {time}", user.UserName, nameof(AddAsync), DateTime.UtcNow);
+                _logger.LogTrace("Failed to add user: {username} with exception: {ex}}", user.UserName, ex);
                 return Task.FromResult(false);
             }
         }

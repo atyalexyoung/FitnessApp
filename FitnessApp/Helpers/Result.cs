@@ -26,7 +26,7 @@
         }
         public static Result<T> Fail<T>(string message)
         {
-            return new Result<T>(default, false, message);
+            return new Result<T>(default!, false, message);
         }
         public static Result Ok()
         {

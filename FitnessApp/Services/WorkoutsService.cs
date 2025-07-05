@@ -1,4 +1,5 @@
-﻿using FitnessApp.Interfaces.Repositories;
+﻿using FitnessApp.Helpers;
+using FitnessApp.Interfaces.Repositories;
 using FitnessApp.Interfaces.Services;
 using FitnessApp.Shared.DTOs.Requests;
 using FitnessApp.Shared.DTOs.Responses;
@@ -19,10 +20,16 @@ namespace FitnessApp.Services
         }
 
         // ------------------------------------------------------------------------------------ Workouts
-        public async Task<IEnumerable<WorkoutResponse>> GetAllWorkoutsAsync(string userId)
+        public async Task<Result<IEnumerable<WorkoutResponse>>> GetAllWorkoutsAsync(string userId)
         {
             var workouts = await _workoutsRepo.GetAllAsync(userId);
-            return workouts.Select(w => w.ToResponse());
+            if (workouts == null)
+            {
+                return Result.Fail<IEnumerable<WorkoutResponse>>("Workouts returned as null.");
+
+            }
+            var responses = workouts.Select(w => w.ToResponse());
+            return Result.Ok(responses);
         }
 
         public async Task<WorkoutResponse?> GetWorkoutByIdAsync(string workoutId, string userId)
