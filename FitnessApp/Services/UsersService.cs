@@ -36,7 +36,7 @@ namespace FitnessApp.Services
             if (await _users.GetByUsernameAsync(username) != null)
             {
                 _logger.LogTrace("Username: {username} already exists in {class} at {time}", username, nameof(RegisterAsync), DateTime.UtcNow);
-                return Result.Fail<User?>("Username taken");
+                return Result.Fail<User?>("Username taken", ErrorType.Conflict);
             }
 
             var user = new User
@@ -55,7 +55,7 @@ namespace FitnessApp.Services
             else
             {
                 _logger.LogError("Failed to add new user with username: {username} at {time}", username, DateTime.UtcNow);
-                return Result.Fail<User?>("Failed to add new user.");
+                return Result.Fail<User?>("Failed to add new user.", ErrorType.Internal);
             }
         }
 
@@ -73,21 +73,21 @@ namespace FitnessApp.Services
             if (user == null)
             {
                 _logger.LogError("Couldn't find user: {username} in {class}, at {time}", username, nameof(LoginAsync), DateTime.UtcNow);
-                return Result.Fail<string?>("Couldn't find user.");
+                return Result.Fail<string?>("Couldn't find user.", ErrorType.NotFound);
             }
 
             // validate password
             if (user.PasswordHash != HashPassword(password))
             {
                 _logger.LogError("Incorrect password for {username} in {class}, at {time}", username, nameof(LoginAsync), DateTime.UtcNow);
-                return Result.Fail<string?>("Incorrect password");
+                return Result.Fail<string?>("Incorrect password", ErrorType.Unauthorized);
             }
 
             // get JWT
             if (!TryGenerateJwt(user, out string jwt))
             {
                 _logger.LogError("Failed to create JWT for user: {username} at {time}", username, DateTime.UtcNow);
-                return Result.Fail<string?>("Failed to create JWT");
+                return Result.Fail<string?>("Failed to create JWT", ErrorType.Internal);
             }
 
             return Result.Ok<string?>(jwt);

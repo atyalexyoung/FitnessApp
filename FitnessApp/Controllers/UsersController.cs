@@ -1,5 +1,8 @@
-﻿using FitnessApp.Interfaces.Services;
+﻿using FitnessApp.Extensions;
+using FitnessApp.Interfaces.Services;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration.UserSecrets;
 
 namespace FitnessApp.Controllers
 {
@@ -21,18 +24,24 @@ namespace FitnessApp.Controllers
         {
             _logger.LogDebug("POST to register user recieved at {Time}", DateTime.UtcNow);
 
-            var user = await _userService.RegisterAsync(req.Username, req.Password);
+            var result = await _userService.RegisterAsync(req.Username, req.Password);
 
-            if (user == null)
+            if (result == null)
             {
-                _logger.LogDebug("Conflict, username: {username} is already taken at {time}", req.Username, DateTime.UtcNow);
-                return Conflict("Username taken");
+                _logger.LogWarning("Result was null for registering username: {user}", req.Username);
+                return StatusCode(StatusCodes.Status500InternalServerError, "Unexpected error occurred.");
             }
-            else
+
+            if (result.IsFailure)
             {
-                _logger.LogDebug("Registered user {user} at {time}.", req.Username, DateTime.UtcNow);
-                return Ok("Registerd");
+                if (result.ErrorType == ErrorType.Conflict)
+                    return Conflict(result.Error);
+
+                return result.ToActionResult();
             }
+
+            // Return 201 Created with user ID (or email, username, etc.)
+            return StatusCode(201, new { Message = "User registered successfully." });
         }
 
         [HttpPost("login")]

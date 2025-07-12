@@ -10,6 +10,6 @@ namespace FitnessApp.Controllers
         /// </summary>
         protected string UserId =>
             User.FindFirst(ClaimTypes.NameIdentifier)?.Value
-            ?? throw new UnauthorizedAccessException("No user ID found");
+            ?? throw new UnauthorizedAccessException("No user ID found"); 
     }
 }

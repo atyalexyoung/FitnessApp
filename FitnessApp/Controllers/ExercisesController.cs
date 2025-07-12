@@ -18,7 +18,7 @@ namespace FitnessApp.Controllers
             _exercisesService = exercisesService;
         }
 
-        [HttpGet]
+        [HttpGet("exercises")]
         public async Task<IActionResult> GetExercises(
             [FromQuery] List<string>? bodyPartTypes,
             [FromQuery] List<string>? bodyParts,
@@ -35,7 +35,7 @@ namespace FitnessApp.Controllers
             return Ok(exercises);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("exercises/{id}")]
         public async Task<IActionResult> GetExerciseById(int id)
         {
             return Ok();
