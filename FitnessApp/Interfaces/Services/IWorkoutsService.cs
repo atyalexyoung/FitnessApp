@@ -38,7 +38,7 @@ namespace FitnessApp.Interfaces.Services
         /// <param name="workout">The new workout to update the previous workout to.</param>
         /// <param name="userId">The id of the user.</param>
         /// <returns>Task of bool if the update was successful or not.</returns>
-        Task<bool> UpdateWorkoutAsync(string workoutId, Workout workout, string userId);
+        Task<Result<Workout>> UpdateWorkoutAsync(string workoutId, Workout workout, string userId);
 
         /// <summary>
         /// Deletes a workout from a user by id.
@@ -63,16 +63,15 @@ namespace FitnessApp.Interfaces.Services
         /// <param name="exerciseId">The id of the exercise to get.</param>
         /// <param name="userId">The id of the user to get the workout from</param>
         /// <returns>Task of nullable <see cref="WorkoutExercise"/></returns>
-        Task<WorkoutExercise?> GetWorkoutExerciseAsync(string workoutId, string exerciseId, string userId);
+        Task<Result<WorkoutExercise>> GetWorkoutExerciseAsync(string workoutId, string exerciseId, string userId);
 
         /// <summary>
         /// Will add a new exercise to a workout.
         /// </summary>
-        /// <param name="workoutId">The id of the workout to add the exercise to.</param>
         /// <param name="workoutExercise">The exercise to add to the workout.</param>
         /// <param name="userId">The user to add the exercise to their workout.</param>
         /// <returns>Task of bool if the addition of exercise was successful or not.</returns>
-        Task<bool> AddExerciseToWorkoutAsync(string workoutId, WorkoutExercise workoutExercise, string userId);
+        Task<Result<WorkoutExerciseResponse>> AddExerciseToWorkoutAsync(CreateWorkoutExerciseRequest workoutExercise, string userId);
 
         /// <summary>
         /// Removes an exercise by id from a user's workout
@@ -81,7 +80,7 @@ namespace FitnessApp.Interfaces.Services
         /// <param name="exerciseId">The id of the exercise to remove.</param>
         /// <param name="userId">The id of the user.</param>
         /// <returns>Task of bool if the removal of exercise from workout was sucessful or not.</returns>
-        Task<bool> RemoveExerciseFromWorkoutAsync(string workoutId, string exerciseId, string userId);
+        Task<Result<bool>> RemoveExerciseFromWorkoutAsync(string workoutId, string exerciseId, string userId);
 
         // Optional: other workout-related business logic
         // Task<IEnumerable<WorkoutStats>> GetWorkoutStatsAsync(string userId);

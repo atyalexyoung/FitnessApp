@@ -5,9 +5,9 @@ namespace FitnessApp.Repositories.InMemoryRepos
 {
     public class InMemoryWorkoutExerciseRepository : IWorkoutExerciseRepository
     {
-        public Task<bool> AddAsync(string workoutId, WorkoutExercise workoutExercise, string userId)
+        public Task<bool> AddAsync(WorkoutExercise workoutExercise, string userId)
         {
-            var workout = SampleData.GetWorkout(workoutId);
+            var workout = SampleData.GetWorkout(workoutExercise.WorkoutId);
             if (workout == null || workout.UserId != userId) return Task.FromResult(false);
 
             workout.WorkoutExercises.Add(workoutExercise);

@@ -4,6 +4,7 @@
     {
         public string Id { get; set; } = null!;
         public string ExerciseId { get; set; } = null!;
+        public string WorkoutId { get; set; } = null!;
 
         // Include basic exercise info if you want it in the response
         public string ExerciseName { get; set; } = "";

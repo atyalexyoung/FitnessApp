@@ -1,4 +1,5 @@
-﻿using FitnessApp.Shared.DTOs.Responses;
+﻿using FitnessApp.Shared.DTOs.Requests;
+using FitnessApp.Shared.DTOs.Responses;
 using FitnessApp.Shared.Models;
 
 namespace FitnessApp.Shared.Mappers
@@ -8,7 +9,6 @@ namespace FitnessApp.Shared.Mappers
         /// <summary>
         /// Converts the <see cref="Workout"/> to a <see cref="WorkoutResponse"/>.
         /// </summary>
-        /// <param name="e">The <see cref="Workout"/> to convert.</param>
         /// <returns>The <see cref="WorkoutResponse"/> correlating with the <see cref="Workout"/></returns>
         public static WorkoutResponse ToResponse(this Workout workout)
         {
@@ -45,6 +45,29 @@ namespace FitnessApp.Shared.Mappers
                 Duration = e.Duration,
                 Order = e.Order
             };
+        }
+
+        public static WorkoutExercise ToEntity(this CreateWorkoutExerciseRequest req)
+        {
+            return new WorkoutExercise
+            {
+                Id = Guid.NewGuid().ToString(),
+                WorkoutId = req.WorkoutId,
+                ExerciseId = req.ExerciseId,
+                Order = req.Order,
+                Sets = req.Sets,
+                Reps = req.Reps,
+                Weight = req.Weight,
+                Duration = req.Duration,
+                Notes = req.Notes
+            };
+        }
+
+        public static void UpdateFrom(this Workout workout, Workout updated)
+        {
+            workout.Name = updated.Name;
+            workout.WorkoutExercises = updated.WorkoutExercises;
+            workout.Description = updated.Description;
         }
     }
 }

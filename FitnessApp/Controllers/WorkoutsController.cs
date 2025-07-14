@@ -1,4 +1,5 @@
 using FitnessApp.Extensions;
+using FitnessApp.Helpers;
 using FitnessApp.Interfaces.Services;
 using FitnessApp.Shared.DTOs.Requests;
 using FitnessApp.Shared.Models;
@@ -54,7 +55,7 @@ namespace FitnessApp.Controllers
 
                 _logger.LogInformation("Responding to GET request for all workouts from user: {user} with {quantity} workouts", UserId, response.Count());
                 return Ok(result.Value);
-            
+
             }
             catch (Exception ex)
             {
@@ -101,7 +102,7 @@ namespace FitnessApp.Controllers
 
                 _logger.LogInformation("Returning workout with id of: {id} from GET workout by ID for {user}", workout.Id, UserId);
                 return Ok(result);
-                
+
             }
             catch (Exception ex)
             {
@@ -189,7 +190,7 @@ namespace FitnessApp.Controllers
                     return StatusCode(StatusCodes.Status500InternalServerError, "Failed to delete workout.");
                 }
 
-                return NoContent();                
+                return NoContent();
             }
             catch (Exception ex)
             {
@@ -245,22 +246,41 @@ namespace FitnessApp.Controllers
 
         [Authorize]
         [HttpPost("workouts/{workoutId}/exercises")]
-        public async Task<IActionResult> AddExerciseToWorkout(string workoutId, [FromBody] WorkoutExercise exercise)
+        public async Task<IActionResult> AddExerciseToWorkout([FromBody] CreateWorkoutExerciseRequest exercise)
         {
-            if (exercise == null) return BadRequest();
+            if (exercise == null || exercise.WorkoutId == null) return BadRequest();
 
-            var success = await _workoutsService.AddExerciseToWorkoutAsync(workoutId, exercise, UserId);
+            var result = await _workoutsService.AddExerciseToWorkoutAsync(exercise, UserId);
 
-            if (!success) { return NotFound(); }
-            return CreatedAtAction(nameof(GetExerciseInWorkout), new { workoutId, exerciseId = exercise.Id }, exercise);
+            if (result == null)
+            {
+                _logger.LogWarning("Result from service was null in endpoint handler.");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Unexpected error occurred.");
+            }
+
+            if (result.IsFailure)
+            {
+                _logger.LogWarning("Could not add the exercise to workout with id: {workout}, for user with id: {user} with error: {error}", exercise.WorkoutId, UserId, result.Error);
+                return result.ToActionResult();
+            }
+
+            var exerciseResponse = result.Value;
+            if (exerciseResponse == null) // shouldn't be since service checks, but doesn't hurt
+            {
+                _logger.LogWarning("No exercises found with workout id: {id} and user id: {id}", exercise.WorkoutId, UserId);
+                return NotFound("No exercises found.");
+            }
+
+            _logger.LogInformation("Responding to PUT for adding exercise to workout with id: {workout}, for user with id: {user}", exerciseResponse.WorkoutId, UserId);
+            return CreatedAtAction(nameof(GetExerciseInWorkout), new { exerciseResponse.WorkoutId, exerciseId = exerciseResponse.Id }, exercise);
         }
 
         [Authorize]
         [HttpGet("workouts/{workoutId}/exercises/{exerciseId}")]
-        public async Task<IActionResult> GetExerciseInWorkout(string workoutId, string exerciseId)
+        public async Task<IActionResult> GetExerciseInWorkout(string workoutId, string workoutExerciseId)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            var exercise = await _workoutsService.GetWorkoutExerciseAsync(workoutId, exerciseId, UserId);
+            var exercise = await _workoutsService.GetWorkoutExerciseAsync(workoutId, workoutExerciseId, UserId);
             if (exercise == null) return NotFound();
             return Ok(exercise);
         }
@@ -270,9 +290,27 @@ namespace FitnessApp.Controllers
         public async Task<IActionResult> DeleteExerciseFromWorkout(string workoutId, string exerciseId)
         {
             // try to get workout
-            var success = await _workoutsService.RemoveExerciseFromWorkoutAsync(workoutId, exerciseId, UserId);
+            var result = await _workoutsService.RemoveExerciseFromWorkoutAsync(workoutId, exerciseId, UserId);
 
-            if (!success) { return NotFound(exerciseId); }
+            if (result == null)
+            {
+                _logger.LogWarning("Result from service was null in endpoint handler.");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Unexpected error occurred.");
+            }
+
+            if (result.IsFailure)
+            {
+                _logger.LogWarning("Failed to delete the exercise in workout with id: {workout}, for user with id: {user} with error: {error}", workoutId, UserId, result.Error);
+                return result.ToActionResult();
+            }
+
+            var exerciseResponse = result.Value;
+            if (!exerciseResponse) // shouldn't be since service checks, but doesn't hurt
+            {
+                _logger.LogWarning("Failed to delete the exercise in workout with id: {workout}, for user with id: {user} with error: {error}", workoutId, UserId, result.Error);
+                return NotFound("No exercises found.");
+            }
+
             return NoContent();
         }
     }

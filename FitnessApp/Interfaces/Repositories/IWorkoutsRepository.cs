@@ -6,8 +6,8 @@ namespace FitnessApp.Interfaces.Repositories
     {
         Task<IEnumerable<Workout>> GetAllAsync(string userId);
         Task<Workout?> GetByIdAsync(string workoutId, string userId);
-        Task<Workout> CreateAsync(Workout workout, string userId);
-        Task<bool> UpdateAsync(string workoutId, Workout workout, string userId);
+        Task<Workout?> CreateAsync(Workout workout, string userId);
+        Task UpdateAsync(Workout workout);
         Task<bool> DeleteAsync(string workoutId, string userId);
     }
 }

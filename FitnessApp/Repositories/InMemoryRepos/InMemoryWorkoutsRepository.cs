@@ -24,11 +24,10 @@ namespace FitnessApp.Repositories.InMemoryRepos
             return Task.FromResult(created);
         }
 
-        public Task<bool> UpdateAsync(string workoutId, Workout workout, string userId)
+
+        public async Task UpdateAsync(Workout workout)
         {
-            // Assume this updates in your in-memory store
-            // Add actual logic as needed
-            return Task.FromResult(true);
+            // do nothing for now.
         }
 
         public Task<bool> DeleteAsync(string workoutId, string userId)

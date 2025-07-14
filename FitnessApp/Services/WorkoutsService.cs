@@ -96,6 +96,12 @@ namespace FitnessApp.Services
                 };
 
                 var returnedWorkout = await _workoutsRepo.CreateAsync(workout, userId);
+
+                if (returnedWorkout == null)
+                {
+                    return Result.Fail<WorkoutResponse>("Unexpected error when creating workout.", ErrorType.Internal);
+                }
+
                 var response = returnedWorkout.ToResponse();
                 _logger.LogDebug("Created new workout with id: {id} and name: {name} for user: {user}", returnedWorkout.Id, returnedWorkout.Name, returnedWorkout.UserId);
                 return Result.Ok(response);
@@ -135,8 +141,29 @@ namespace FitnessApp.Services
             }
         }
 
-        public Task<bool> UpdateWorkoutAsync(string workoutId, Workout workout, string userId) =>
-            _workoutsRepo.UpdateAsync(workoutId, workout, userId);
+        public async Task<Result<Workout>> UpdateWorkoutAsync(string workoutId, Workout workout, string userId)
+        {
+            try
+            {
+                var existingWorkout = await _workoutsRepo.GetByIdAsync(workoutId, userId);
+                if (existingWorkout == null)
+                {
+                    _logger.LogWarning("The workout being update with id: {workout} for user {user} could not be found.", workoutId, userId);
+                    return Result.Fail<Workout>("The workout being updated could not be found.", ErrorType.NotFound);
+                }
+
+                existingWorkout.UpdateFrom(workout);
+                existingWorkout.LastModifiedAt = DateTime.UtcNow;
+
+                await _workoutsRepo.UpdateAsync(existingWorkout);
+                return Result.Ok(existingWorkout);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Error when updating workout with id: {workout} for user with id: {user} with exception: {ex}", workoutId, userId, ex);
+                return Result.Fail<Workout>("Unexpected error when getting exercises", ErrorType.Internal);
+            }
+        }
 
         public async Task<Result<bool>> DeleteWorkoutAsync(string workoutId, string userId)
         {
@@ -167,13 +194,96 @@ namespace FitnessApp.Services
 
         // ------------------------------------------------------------------------------ Workout Exercises
 
-        public Task<WorkoutExercise?> GetWorkoutExerciseAsync(string workoutId, string exerciseId, string userId) =>
-            _workoutExercisesRepo.GetByIdAsync(workoutId, exerciseId, userId);
+        public async Task<Result<WorkoutExercise>> GetWorkoutExerciseAsync(string workoutId, string workoutExerciseId, string userId)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(workoutId) || string.IsNullOrWhiteSpace(userId) || string.IsNullOrWhiteSpace(workoutExerciseId))
+                {
+                    _logger.LogWarning("Null or empty workout id, workout exercise id, or user id.");
+                    return Result.Fail<WorkoutExercise>("Null or empty workout ID, workout exercise ID, or User ID provided", ErrorType.Validation);
+                }
 
-        public Task<bool> AddExerciseToWorkoutAsync(string workoutId, WorkoutExercise workoutExercise, string userId) =>
-            _workoutExercisesRepo.AddAsync(workoutId, workoutExercise, userId);
+                var workoutExercise = await _workoutExercisesRepo.GetByIdAsync(workoutId, workoutExerciseId, userId);
+                if (workoutExercise == null)
+                {
+                    _logger.LogWarning("Failed to get workout exercise with id: {workoutExercise} for workout with id: {workout} and user with id: {user}", workoutExerciseId, workoutId, userId);
+                    return Result.Fail<WorkoutExercise>("Unable to get workout exercise.", ErrorType.NotFound);
+                }
 
-        public Task<bool> RemoveExerciseFromWorkoutAsync(string workoutId, string exerciseId, string userId) =>
-            _workoutExercisesRepo.RemoveAsync(workoutId, exerciseId, userId);
+                return Result.Ok(workoutExercise);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogWarning("Failed to get workout exercise with id: {workoutExercise} for workout with id: {workout} and user with id: {user} with exception: {ex}", workoutExerciseId, workoutId, userId, ex);
+                return Result.Fail<WorkoutExercise>("Unable to get workout exercise.", ErrorType.Internal);
+            }
+        }
+
+        public async Task<Result<WorkoutExerciseResponse>> AddExerciseToWorkoutAsync(CreateWorkoutExerciseRequest workoutExerciseRequest, string userId)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(userId) || workoutExerciseRequest == null || workoutExerciseRequest.WorkoutId == null)
+                {
+                    _logger.LogWarning("Null or empty workout id, workout exercise id, or user id.");
+                    return Result.Fail<WorkoutExerciseResponse>("Null or empty workout ID, workout exercise ID, or User ID provided", ErrorType.Validation);
+                }
+
+                var workout = await _workoutsRepo.GetByIdAsync(workoutExerciseRequest.WorkoutId, userId);
+                if (workout == null)
+                {
+                    _logger.LogWarning("Failed to add exercise exercise to workout with id: {workout} and user with id: {user}", workoutExerciseRequest.WorkoutId, userId);
+                    return Result.Fail<WorkoutExerciseResponse>("Workout not found or does not belong to user", ErrorType.NotFound);
+                }
+
+                var workoutExercise = workoutExerciseRequest.ToEntity();
+
+                var success = await _workoutExercisesRepo.AddAsync(workoutExercise, userId);
+
+                if (!success)
+                {
+                    _logger.LogWarning("Failed to add exercise exercise with id: {workoutExercise} to workout with id: {workout} and user with id: {user}", workoutExercise.Id, workoutExercise.WorkoutId, userId);
+                    return Result.Fail<WorkoutExerciseResponse>("Unable to get workout exercise.", ErrorType.NotFound);
+                }
+
+                _logger.LogDebug("Successfully removed the workout exercise with id: {exercise} from workout with id: {workout} for user with id: {user}.", workoutExercise.Id, workoutExercise.WorkoutId, userId);
+                var response = workoutExercise.ToResponse();
+                return Result.Ok(response);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogWarning("Failed to remove workout exercise for workout with id: {workout} and user with id: {user} with exception: {ex}", workoutExerciseRequest.WorkoutId ?? "NULL ID", userId ?? "NULL ID", ex);
+                return Result.Fail<WorkoutExerciseResponse>("Unable to get workout exercise.", ErrorType.Internal);
+            }
+        }
+
+        public async Task<Result<bool>> RemoveExerciseFromWorkoutAsync(string workoutId, string workoutExerciseId, string userId)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(workoutId) || string.IsNullOrWhiteSpace(userId) || string.IsNullOrWhiteSpace(workoutExerciseId))
+                {
+                    _logger.LogWarning("Null or empty workout id, workout exercise id, or user id.");
+                    return Result.Fail<bool>("Null or empty workout ID, workout exercise ID, or User ID provided", ErrorType.Validation);
+                }
+
+                var success = await _workoutExercisesRepo.RemoveAsync(workoutId, workoutExerciseId, userId);
+
+                if (!success)
+                {
+                    _logger.LogWarning("Failed to get workout exercise with id: {workoutExercise} for workout with id: {workout} and user with id: {user}", workoutExerciseId, workoutId, userId);
+                    return Result.Fail<bool>("Unable to get workout exercise.", ErrorType.NotFound);
+                }
+
+                _logger.LogDebug("Successfully removed the workout exercise with id: {exercise} from workout with id: {workout} for user with id: {user}.", workoutExerciseId, workoutId, userId);
+                return Result.Ok(true);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogWarning("Failed to remove workout exercise with id: {workoutExercise} for workout with id: {workout} and user with id: {user} with exception: {ex}", workoutExerciseId, workoutId, userId, ex);
+                return Result.Fail<bool>("Unable to get workout exercise.", ErrorType.Internal);
+            }
+        }
     }
 }

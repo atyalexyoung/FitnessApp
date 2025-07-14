@@ -1,1 +1,13 @@
-<p>login works!</p>
+
+<h2>Login</h2>
+<p>please why</p>
+<form>
+    <label for="username">Username</label>
+    <input id="username" name="username" [(ngModel)]="username" required/>
+
+    <label for="password">Password</label>
+    <input id="password" name="password" [(ngModel)]="password" type="password" required/>
+
+    <button type="button" (click)="onLogin()">Login</button>
+    <button type="button" (click)="onRegister()">Register</button>
+</form>

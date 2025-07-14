@@ -51,11 +51,12 @@ namespace FitnessApp
             }
 
             // setup and run app.
+            app.UseCors();
             app.UseHttpsRedirection();
             app.UseAuthentication();
             app.UseAuthorization();
             app.MapControllers();
-            
+
             try
             {
                 app.Run();
@@ -63,7 +64,7 @@ namespace FitnessApp
             finally
             {
                 Log.CloseAndFlush();
-            }        
+            }
         }
 
         /// <summary>
@@ -137,6 +138,16 @@ namespace FitnessApp
                             new string[] {}
                         }
                     });
+            });
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(policy =>
+                {
+                    policy.AllowAnyOrigin()
+                          .AllowAnyHeader()
+                          .AllowAnyMethod();
+                });
             });
 
             // database setup.
