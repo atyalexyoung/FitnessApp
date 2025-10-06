@@ -6,7 +6,7 @@ import { MatInputModule } from '@angular/material/input';
 import { BodyPart, Exercise, ExerciseTypeTag } from '../../shared/models/exercise';
 import { ExerciseCard } from "../../shared/components/exercise-card/exercise-card";
 import { CommonModule } from '@angular/common';
-import { MatGridListModule, MatGridTile } from '@angular/material/grid-list';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +18,6 @@ import { MatGridListModule, MatGridTile } from '@angular/material/grid-list';
     ExerciseCard,
     CommonModule,
     MatGridListModule,
-    MatGridTile
   ],
   templateUrl: './home.html',
   styleUrl: './home.scss'
