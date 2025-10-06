@@ -1,0 +1,23 @@
+<mat-card>
+    <!-- Image container with loading placeholder -->
+    <div class="image-container">
+        <img *ngIf="imageLoaded" mat-card-image [src]="imageSrc" [alt]="exercise.name" (load)="onImageLoad()"
+            loading="lazy">
+
+        <div *ngIf="!imageLoaded" class="image-placeholder">
+            Loading...
+        </div>
+    </div>
+
+    <mat-card-header>
+        <mat-card-title>{{ exercise.name }}</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+        <p>{{ exercise.description }}</p>
+    </mat-card-content>
+
+    <mat-card-actions>
+        <button mat-button color="primary">View Details</button>
+    </mat-card-actions>
+</mat-card>

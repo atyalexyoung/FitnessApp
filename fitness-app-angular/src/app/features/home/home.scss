@@ -1,0 +1,41 @@
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.search-section {
+    margin: 20px 0;
+}
+
+form {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.search-form {
+    display: flex;
+    gap: 16px;
+    align-items: stretch;
+}
+
+.search-field {
+    flex: 1;
+}
+
+button {
+    flex-shrink: 0;
+}
+
+.results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+}
+
+.results app-exercise-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}

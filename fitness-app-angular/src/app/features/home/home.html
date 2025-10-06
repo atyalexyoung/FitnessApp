@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>Browse Exercises</h1>
+    <section>
+        <form class="search-form">
+            <mat-form-field appearance="outline" class="search-field">
+                <mat-label>Search Exercises</mat-label>
+                <input matInput type="text" placeholder="e.g. bench press, squats...">
+                <mat-icon matPrefix>search</mat-icon>
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" type="button" class="search-button">
+                Search
+            </button>
+        </form>
+    </section>
+
+    <section class="results">
+        <app-exercise-card *ngFor="let exercise of exerciseList" [exercise]="exercise">
+        </app-exercise-card>
+    </section>
+</div>
