@@ -4,18 +4,44 @@
         <form class="search-form">
             <mat-form-field appearance="outline" class="search-field">
                 <mat-label>Search Exercises</mat-label>
-                <input matInput type="text" placeholder="e.g. bench press, squats...">
+                <input matInput placeholder="e.g. bench press, squats..." [(ngModel)]="searchTerm"
+                    [ngModelOptions]="{standalone: true}" (ngModelChange)="filterExercises()">
                 <mat-icon matPrefix>search</mat-icon>
             </mat-form-field>
-
-            <button mat-raised-button color="primary" type="button" class="search-button">
-                Search
-            </button>
         </form>
     </section>
 
+    <section class="chip-filters">
+        <h3>Filter by Body Part</h3>
+        <mat-chip-listbox multiple [(ngModel)]="selectedBodyPartTypes" (ngModelChange)="onBodyPartTypeChange()"
+            class="horizontal-scroll">
+            <mat-chip-option *ngFor="let part of bodyPartTypes" [value]="part">
+                {{ part }}
+            </mat-chip-option>
+        </mat-chip-listbox>
+
+        <!-- Only show specific muscles if at least one body part type is selected -->
+        <ng-container *ngIf="selectedBodyPartTypes.length > 0">
+            <h3>Filter by Specific Muscles</h3>
+            <mat-chip-listbox multiple [(ngModel)]="selectedSpecificMuscles" (ngModelChange)="filterExercises()"
+                class="horizontal-scroll">
+                <mat-chip-option *ngFor="let muscle of availableSpecificMuscles" [value]="muscle">
+                    {{ muscle }}
+                </mat-chip-option>
+            </mat-chip-listbox>
+        </ng-container>
+
+        <h3>Filter by Tags</h3>
+        <mat-chip-listbox multiple [(ngModel)]="selectedTags" (ngModelChange)="filterExercises()"
+            class="horizontal-scroll">
+            <mat-chip-option *ngFor="let tag of exerciseTags" [value]="tag">
+                {{ tag }}
+            </mat-chip-option>
+        </mat-chip-listbox>
+    </section>
+
     <section class="results">
-        <app-exercise-card *ngFor="let exercise of exerciseList" [exercise]="exercise">
+        <app-exercise-card *ngFor="let exercise of filteredExerciseList" [exercise]="exercise">
         </app-exercise-card>
     </section>
 </div>

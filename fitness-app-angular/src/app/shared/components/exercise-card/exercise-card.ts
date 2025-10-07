@@ -15,7 +15,7 @@ import { Router, RouterModule } from '@angular/router';
 export class ExerciseCard {
   @Input() exercise!: Exercise;
 
-  constructor(private router: Router){}
+  constructor(private router: Router) { }
 
   imageLoaded = false;
   imageSrc!: string;
@@ -32,7 +32,7 @@ export class ExerciseCard {
     this.imageLoaded = true;
   }
 
-  viewExerciseDetails(){
-    this.router.navigate(['exercise-details'])
+  viewExerciseDetails() {
+    this.router.navigate(['exercise-details', this.exercise.id])
   }
 }

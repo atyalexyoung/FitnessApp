@@ -4,13 +4,13 @@ import { ExerciseDetails } from './features/exercise-details/exercise-details';
 
 export const routes: Routes = [
     {
-        path:'',
+        path: '',
         component: HomeComponent,
-        title:'Home Page'
+        title: 'Home Page'
     },
     {
-        path:'exercise-details',
+        path: 'exercise-details/:id',
         component: ExerciseDetails,
-        title:'Exercise Details Page'
+        title: 'Exercise Details Page'
     }
 ];

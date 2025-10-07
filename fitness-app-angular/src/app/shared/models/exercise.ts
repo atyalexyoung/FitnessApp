@@ -94,3 +94,12 @@ export function getBodyPartType(bodyPart: BodyPart): BodyPartType {
             return BodyPartType.Legs;
     }
 }
+
+export const bodyPartTypeMap: Record<BodyPartType, BodyPart[]> = {
+    [BodyPartType.Arms]: [BodyPart.Biceps, BodyPart.Triceps, BodyPart.Forearms],
+    [BodyPartType.Shoulders]: [BodyPart.Deltoids],
+    [BodyPartType.Chest]: [BodyPart.Chest],
+    [BodyPartType.Back]: [BodyPart.Lats, BodyPart.Rhomboids, BodyPart.Trapezius, BodyPart.LowerBack],
+    [BodyPartType.Core]: [BodyPart.Abdominals, BodyPart.Obliques],
+    [BodyPartType.Legs]: [BodyPart.Glutes, BodyPart.Quads, BodyPart.Hamstrings, BodyPart.Calves]
+};

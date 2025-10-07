@@ -1,1 +1,40 @@
-<p>exercise-details works!</p>
+<main class="exercise-details-page" fxLayout="column" fxLayoutGap="24px">
+    <div class="exercise-image-container">
+        <img *ngIf="exercise && imageLoaded" class="exercise-image" [src]="imageSrc" [alt]="exercise.name"
+            (load)="onImageLoad()" />
+
+        <mat-progress-spinner *ngIf="!imageLoaded" mode="indeterminate" diameter="50">
+        </mat-progress-spinner>
+    </div>
+
+    <section>
+        <h1 matTypography>{{ exercise?.name }}</h1>
+    </section>
+
+    <section>
+        <h3 matTypography>Description</h3>
+        <p>{{ exercise?.description }}</p>
+    </section>
+
+    <section>
+        <h3 matTypography>Body parts worked</h3>
+        <mat-chip-set>
+            <mat-chip *ngFor="let part of exercise?.bodyParts">
+                {{ part }}
+            </mat-chip>
+        </mat-chip-set>
+
+        <h3 matTypography>Type(s)</h3>
+        <mat-chip-set>
+            <mat-chip *ngFor="let tag of exercise?.exerciseTags">
+                {{ tag }}
+            </mat-chip>
+        </mat-chip-set>
+    </section>
+
+    <section>
+        <button mat-raised-button color="primary" (click)="goBack()">
+            Back
+        </button>
+    </section>
+</main>

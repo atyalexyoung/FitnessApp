@@ -9,7 +9,6 @@ import { HomeComponent } from './features/home/home';
   imports: [
     RouterOutlet,
     NavbarComponent,
-    HomeComponent
   ],
   templateUrl: './app.html',
   styleUrls: ['./app.scss']
