@@ -12,7 +12,7 @@ export enum ExerciseTypeTag {
     Cardio = 'Cardio',
     Strength = 'Strength',
     Powerlifting = 'Powerlifting',
-    OlympicLifting = 'OlympicLifting',
+    Olympic = 'OlympicLifting',
     HIIT = 'HIIT',
     Bodyweight = 'Bodyweight',
     Mobility = 'Mobility',

@@ -1,6 +1,6 @@
 ﻿namespace FitnessApp.Shared.Enums
 {
-    public static class ExerciseType
+    public static class ExerciseTypes
     {
         public enum ExerciseTypeTag
         {

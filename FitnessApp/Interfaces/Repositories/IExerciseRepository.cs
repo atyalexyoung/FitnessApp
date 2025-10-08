@@ -3,14 +3,13 @@ using FitnessApp.Shared.Models;
 
 namespace FitnessApp.Interfaces.Repositories
 {
-    public interface IExercisesRepository
+    public interface IExerciseRepository
     {
         Task<IEnumerable<Exercise>> GetFilteredAsync(
             List<BodyParts.BodyPartType>? bodyPartTypes = null,
             List<BodyParts.BodyPart>? bodyParts = null,
-            List<ExerciseType.ExerciseTypeTag>? exerciseTags = null);
+            List<ExerciseTypes.ExerciseTypeTag>? exerciseTags = null);
 
         Task<Exercise?> GetByIdAsync(string id);
-
     }
 }
