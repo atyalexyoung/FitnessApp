@@ -10,18 +10,18 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
-namespace FitnessApp.Migrations
+namespace FitnessApp.Data.Migrations
 {
     [DbContext(typeof(FitnessAppDbContext))]
-    [Migration("20250701044732_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20251009181720_ExerciseAddition")]
+    partial class ExerciseAddition
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.6")
+                .HasAnnotation("ProductVersion", "9.0.9")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
@@ -31,16 +31,8 @@ namespace FitnessApp.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("text");
 
-                    b.PrimitiveCollection<int[]>("BodyPart")
-                        .IsRequired()
-                        .HasColumnType("integer[]");
-
                     b.Property<string>("Description")
                         .HasColumnType("text");
-
-                    b.PrimitiveCollection<int[]>("ExerciseTags")
-                        .IsRequired()
-                        .HasColumnType("integer[]");
 
                     b.PrimitiveCollection<List<string>>("ImageUrls")
                         .IsRequired()
@@ -57,6 +49,32 @@ namespace FitnessApp.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Exercises");
+                });
+
+            modelBuilder.Entity("FitnessApp.Shared.Models.ExerciseBodyPart", b =>
+                {
+                    b.Property<string>("ExerciseId")
+                        .HasColumnType("text");
+
+                    b.Property<string>("BodyPart")
+                        .HasColumnType("text");
+
+                    b.HasKey("ExerciseId", "BodyPart");
+
+                    b.ToTable("ExerciseBodyPart");
+                });
+
+            modelBuilder.Entity("FitnessApp.Shared.Models.ExerciseTag", b =>
+                {
+                    b.Property<string>("ExerciseId")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Tag")
+                        .HasColumnType("text");
+
+                    b.HasKey("ExerciseId", "Tag");
+
+                    b.ToTable("ExerciseTag");
                 });
 
             modelBuilder.Entity("FitnessApp.Shared.Models.User", b =>
@@ -157,6 +175,28 @@ namespace FitnessApp.Migrations
                     b.ToTable("WorkoutExercises");
                 });
 
+            modelBuilder.Entity("FitnessApp.Shared.Models.ExerciseBodyPart", b =>
+                {
+                    b.HasOne("FitnessApp.Shared.Models.Exercise", "Exercise")
+                        .WithMany("ExerciseBodyParts")
+                        .HasForeignKey("ExerciseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Exercise");
+                });
+
+            modelBuilder.Entity("FitnessApp.Shared.Models.ExerciseTag", b =>
+                {
+                    b.HasOne("FitnessApp.Shared.Models.Exercise", "Exercise")
+                        .WithMany("ExerciseTags")
+                        .HasForeignKey("ExerciseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Exercise");
+                });
+
             modelBuilder.Entity("FitnessApp.Shared.Models.Workout", b =>
                 {
                     b.HasOne("FitnessApp.Shared.Models.User", "User")
@@ -185,6 +225,13 @@ namespace FitnessApp.Migrations
                     b.Navigation("Exercise");
 
                     b.Navigation("Workout");
+                });
+
+            modelBuilder.Entity("FitnessApp.Shared.Models.Exercise", b =>
+                {
+                    b.Navigation("ExerciseBodyParts");
+
+                    b.Navigation("ExerciseTags");
                 });
 
             modelBuilder.Entity("FitnessApp.Shared.Models.User", b =>

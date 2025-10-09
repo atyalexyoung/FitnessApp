@@ -9,6 +9,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Serilog;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace FitnessApp
 {
@@ -27,7 +28,14 @@ namespace FitnessApp
             builder.Host.UseSerilog();
 
             // Add services to the container.
-            builder.Services.AddControllers();
+            builder.Services.AddControllers()
+                .AddJsonOptions(options =>
+                {
+                    // adding json string enum converter to convert enums to strings when sending to front-end
+                    // (e.g. BodyParts.BodyPart.Biceps = 1 in database and backend, but will send as "Biceps" to front-end.)
+                    options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+                });
+                
             AddServices(builder);
 
             var app = builder.Build();

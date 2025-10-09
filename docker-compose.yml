@@ -5,8 +5,12 @@ services:
       context: .
       dockerfile: FitnessApp/Dockerfile
     environment:
+      ASPNETCORE_ENVIRONMENT: Development
       Jwt__Key: ${JWT_KEY}
       ConnectionStrings__DefaultConnection: ${CONNECTION_STRING}
+    ports:
+      - "8080:8080"
+      - "8081:8081"
   postgres:
     image: postgres:15-alpine
     environment:

@@ -1,4 +1,5 @@
 ﻿using FitnessApp.Helpers;
+using FitnessApp.Shared.DTOs;
 using FitnessApp.Shared.Enums;
 using FitnessApp.Shared.Models;
 
@@ -13,7 +14,7 @@ namespace FitnessApp.Interfaces.Services
         /// <param name="bodyParts">The body part(s) of the exercises to get.</param>
         /// <param name="ExerciseTags">The types/tags of the exercises to get.</param>
         /// <returns>A task of enumerable <see cref="Exercise"/> objects.</returns>
-        public Task<Result<IEnumerable<Exercise>>> GetExercisesAsync(
+        public Task<Result<IEnumerable<ExerciseResponse>>> GetExercisesAsync(
             List<BodyParts.BodyPartType>? bodyPartTypes = null,
             List<BodyParts.BodyPart>? bodyParts = null,
             List<ExerciseTypes.ExerciseTypeTag>? ExerciseTags = null);
@@ -23,6 +24,6 @@ namespace FitnessApp.Interfaces.Services
         /// </summary>
         /// <param name="id">The id of the exercise to get.</param>
         /// <returns>A task of a <see cref="Exercise"/> object.</returns>
-        public Task<Result<Exercise>> GetExerciseByIdAsync(string id);
+        public Task<Result<ExerciseResponse>> GetExerciseByIdAsync(string id);
     }
 }

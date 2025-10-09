@@ -2,13 +2,12 @@ services:
   fitnessapp:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_HTTP_PORTS=8080
-      - ASPNETCORE_HTTPS_PORTS=8081
+      - DOTNET_USER_SECRETS=${DOTNET_USER_SECRETS:-$HOME/.microsoft/usersecrets}
+      - DOTNET_HTTPS_CERTS=${DOTNET_HTTPS_CERTS:-$HOME/.aspnet/https}
+      - ASPNETCORE_URLS=http://+:8080;https://+:8081
     ports:
-      - "8080"
-      - "8081"
+      - "8080:8080"
+      - "8081:8081"
     volumes:
-      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
-      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
-      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
-      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - ${DOTNET_HTTPS_CERTS:-$HOME/.aspnet/https}:/home/app/.aspnet/https:ro
+      - ${DOTNET_USER_SECRETS:-$HOME/.microsoft/usersecrets}:/home/app/.microsoft/usersecrets:ro

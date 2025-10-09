@@ -37,6 +37,32 @@ namespace FitnessApp.Data
                 .HasForeignKey(we => we.ExerciseId)
                 .IsRequired()
                 .OnDelete(DeleteBehavior.Restrict); // Exercise is static, so don't cascade delete
-        }
+
+            // Exercise <-> BodyPart junction
+            modelBuilder.Entity<ExerciseBodyPart>()
+                .HasKey(eb => new { eb.ExerciseId, eb.BodyPart });
+            
+            modelBuilder.Entity<ExerciseBodyPart>()
+                .HasOne(eb => eb.Exercise)
+                .WithMany(e => e.ExerciseBodyParts)
+                .HasForeignKey(eb => eb.ExerciseId);
+            
+            modelBuilder.Entity<ExerciseBodyPart>()
+                .Property(eb => eb.BodyPart)
+                .HasConversion<string>(); // Store as string in DB
+            
+            // Exercise <-> Tag junction
+            modelBuilder.Entity<ExerciseTag>()
+                .HasKey(et => new { et.ExerciseId, et.Tag });
+            
+            modelBuilder.Entity<ExerciseTag>()
+                .HasOne(et => et.Exercise)
+                .WithMany(e => e.ExerciseTags)
+                .HasForeignKey(et => et.ExerciseId);
+            
+            modelBuilder.Entity<ExerciseTag>()
+                .Property(et => et.Tag)
+                .HasConversion<string>(); // Store as string in DB
+                }
     }
 }

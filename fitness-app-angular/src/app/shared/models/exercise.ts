@@ -92,6 +92,9 @@ export function getBodyPartType(bodyPart: BodyPart): BodyPartType {
         case BodyPart.Hamstrings:
         case BodyPart.Calves:
             return BodyPartType.Legs;
+
+        default:
+            throw new Error(`Unknown body part: ${bodyPart ?? "NULL BODY PART"}`)
     }
 }
 
