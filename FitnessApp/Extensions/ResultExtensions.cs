@@ -1,4 +1,4 @@
-using FitnessApp.Helpers; // Your shared Result classes
+using FitnessApp.Helpers;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FitnessApp.Extensions

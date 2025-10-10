@@ -1,25 +1,55 @@
-﻿using FitnessApp.Interfaces.Services;
+﻿using FitnessApp.Helpers;
+using FitnessApp.Interfaces.Repositories;
+using FitnessApp.Interfaces.Services;
+using FitnessApp.Shared.DTOs;
 using FitnessApp.Shared.Enums;
+using FitnessApp.Shared.Mappers;
 using FitnessApp.Shared.Models;
 
 namespace FitnessApp.Services
 {
-    public class ExercisesService : IExercisesService
+    public class ExerciseService : IExerciseService
     {
+        private readonly ILogger<ExerciseService> _logger;
+        private readonly IExerciseRepository _exerciseRepo;
+
+        public ExerciseService(ILogger<ExerciseService> logger, IExerciseRepository exercisesRepository)
+        {
+            _logger = logger;
+            _exerciseRepo = exercisesRepository;
+        }
+
         /// <summary>
         /// Will get all the exercises that match based on the filters passed in.
         /// </summary>
         /// <param name="bodyPartTypes">The body part type(s) of the exercises to get.</param>
         /// <param name="bodyParts">The body part(s) of the exercises to get.</param>
-        /// <param name="ExerciseTags">The types/tags of the exercises to get.</param>
+        /// <param name="exerciseTags">The types/tags of the exercises to get.</param>
         /// <returns>A task of enumerable <see cref="Exercise"/> objects.</returns>
-        public Task<IEnumerable<Exercise>> GetExercisesAsync(
+        public async Task<Result<IEnumerable<ExerciseResponse>>> GetExercisesAsync(
             List<BodyParts.BodyPartType>? bodyPartTypes = null,
             List<BodyParts.BodyPart>? bodyParts = null,
-            List<ExerciseType.ExerciseTypeTag>? ExerciseTags = null)
+            List<ExerciseTypes.ExerciseTypeTag>? exerciseTags = null)
         {
-            IEnumerable<Exercise> temp = new List<Exercise>();
-            return Task.FromResult(temp);
+            try
+            {
+                _logger.LogDebug("Getting all exercises.");
+                var exercises = await _exerciseRepo.GetFilteredAsync(bodyPartTypes, bodyParts, exerciseTags);
+
+                if (exercises == null)
+                {
+                    _logger.LogError("Recieved null exercises. Returning Result.Fail with error not found.");
+                    return Result.Fail<IEnumerable<ExerciseResponse>>("Exercises returned as null", ErrorType.NotFound);
+                }
+
+                var response = exercises.Select(e => e.ToResponse());
+                return Result.Ok(response);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Error when getting filtered exercises with exception: {ex}", ex);
+                return Result.Fail<IEnumerable<ExerciseResponse>>("Unexpected error when getting exercises", ErrorType.Internal);
+            }
         }
 
         /// <summary>
@@ -27,9 +57,27 @@ namespace FitnessApp.Services
         /// </summary>
         /// <param name="id">The id of the exercise to get.</param>
         /// <returns>A task of a <see cref="Exercise"/> object.</returns>
-        public Task<Exercise?> GetExerciseByIdAsync(int id)
+        public async Task<Result<ExerciseResponse>> GetExerciseByIdAsync(string id)
         {
-            return Task.FromResult<Exercise?>(null);
+            try
+            {
+                _logger.LogDebug("Getting all exercises.");
+                var exercise = await _exerciseRepo.GetByIdAsync(id);
+
+                if (exercise == null)
+                {
+                    _logger.LogError("Recieved null exercise for exercise with id: {}. Returning Result.Fail with error not found.", id);
+                    return Result.Fail<ExerciseResponse>("Exercises returned as null", ErrorType.NotFound);
+                }
+
+                var response = exercise.ToResponse();
+                return Result.Ok(response);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Error when getting exercise by id of: {id} with exception: {ex}", id, ex);
+                return Result.Fail<ExerciseResponse>("Unexpected error when getting exercises", ErrorType.Internal);
+            }
         }
     }
 }

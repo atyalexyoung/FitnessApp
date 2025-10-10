@@ -8,31 +8,31 @@
         public enum BodyPart
         {
             // Arms
-            Biceps,
-            Triceps,
-            Forearms,
+            Biceps = 1,
+            Triceps = 2,
+            Forearms = 3 ,
 
             // Shoulders
-            Deltoids,
+            Deltoids = 4,
 
             // Chest
-            Chest,
+            Chest = 5,
 
             // Back
-            Lats,
-            Rhomboids,
-            Trapezius,
-            LowerBack,
+            Lats = 6,
+            Rhomboids = 7,
+            Trapezius = 8,
+            LowerBack = 9,
 
             // Core
-            Abdominals,
-            Obliques,
+            Abdominals = 10,
+            Obliques = 11,
 
             // Legs
-            Glutes,
-            Quads,
-            Hamstrings,
-            Calves
+            Glutes = 12,
+            Quads = 13,
+            Hamstrings = 14,
+            Calves = 15
         }
 
         /// <summary>
@@ -40,12 +40,12 @@
         /// </summary>
         public enum BodyPartType
         {
-            Arms,
-            Shoulders,
-            Chest,
-            Back,
-            Core,
-            Legs
+            Arms = 1,
+            Shoulders = 2,
+            Chest = 3,
+            Back = 4,
+            Core = 5,
+            Legs = 6
         }
 
         /// <summary>

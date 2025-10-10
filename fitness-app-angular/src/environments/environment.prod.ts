@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    apiUrl: 'https://api.fitnessfriend.com'  // your deployed backend
+    apiUrl: 'https://fitness-friend.com/api'
 };

@@ -2,7 +2,6 @@
 using FitnessApp.Interfaces.Repositories;
 using FitnessApp.Shared.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.FileProviders;
 
 namespace FitnessApp.Repositories
 {

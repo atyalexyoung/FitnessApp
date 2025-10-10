@@ -12,7 +12,7 @@ export enum ExerciseTypeTag {
     Cardio = 'Cardio',
     Strength = 'Strength',
     Powerlifting = 'Powerlifting',
-    OlympicLifting = 'OlympicLifting',
+    Olympic = 'OlympicLifting',
     HIIT = 'HIIT',
     Bodyweight = 'Bodyweight',
     Mobility = 'Mobility',
@@ -92,6 +92,9 @@ export function getBodyPartType(bodyPart: BodyPart): BodyPartType {
         case BodyPart.Hamstrings:
         case BodyPart.Calves:
             return BodyPartType.Legs;
+
+        default:
+            throw new Error(`Unknown body part: ${bodyPart ?? "NULL BODY PART"}`)
     }
 }
 

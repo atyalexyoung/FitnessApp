@@ -47,11 +47,6 @@ export class HomeComponent {
   exerciseTags: string[] = Object.values(ExerciseTypeTag);
   selectedTags: string[] = [];
 
-  constructor() {
-    this.exerciseList = this.exerciseService.getAllExercises();
-    this.filteredExerciseList = this.exerciseList;
-  }
-
   onBodyPartTypeChange() {
     // Update available specific muscles based on selected body part types
     this.availableSpecificMuscles = [];
@@ -69,6 +64,27 @@ export class HomeComponent {
     );
 
     this.filterExercises();
+  }
+
+  ngOnInit() {
+    console.log('Fetching exercises...');
+    this.exerciseService.getAllExercises().subscribe({
+      next: (exercises) => {
+        console.log('Exercises received:', exercises);
+        this.exerciseList = exercises;
+        this.filteredExerciseList = exercises;
+      },
+      error: (error) => {
+        console.error('Error fetching exercises:', error);
+      },
+      complete: () => {
+        console.log('Exercise fetch complete');
+      }
+    });
+  }
+
+  ngOnDestroy() {
+
   }
 
   filterExercises() {

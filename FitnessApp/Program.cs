@@ -1,7 +1,7 @@
 using FitnessApp.Data;
 using FitnessApp.Interfaces.Repositories;
 using FitnessApp.Interfaces.Services;
-using FitnessApp.Repositories.InMemoryRepos;
+using FitnessApp.Repositories;
 using FitnessApp.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +9,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Serilog;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace FitnessApp
 {
@@ -27,13 +28,28 @@ namespace FitnessApp
             builder.Host.UseSerilog();
 
             // Add services to the container.
-            builder.Services.AddControllers();
+            builder.Services.AddControllers()
+                .AddJsonOptions(options =>
+                {
+                    // adding json string enum converter to convert enums to strings when sending to front-end
+                    // (e.g. BodyParts.BodyPart.Biceps = 1 in database and backend, but will send as "Biceps" to front-end.)
+                    options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+                });
+
             AddServices(builder);
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
+                using var scope = app.Services.CreateScope();
+                var dbContext = scope.ServiceProvider.GetRequiredService<FitnessAppDbContext>();
+
+                // In dev, run migrations and seed everything
+                await dbContext.Database.MigrateAsync();
+                await DatabaseSeeder.SeedDatabaseAsync(dbContext);
+
                 // do swagger stuff if in development.
                 app.UseSwagger();
                 app.UseSwaggerUI(options => // UseSwaggerUI is called only in Development.
@@ -41,13 +57,6 @@ namespace FitnessApp
                     options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
                     options.RoutePrefix = string.Empty;
                 });
-
-                // seed database with test data if in local development.
-                using var scope = app.Services.CreateScope();
-                var services = scope.ServiceProvider;
-
-                var dbContext = services.GetRequiredService<FitnessAppDbContext>();
-                await DatabaseSeeder.SeedDatabaseAsync(dbContext);
             }
 
             // setup and run app.
@@ -56,6 +65,7 @@ namespace FitnessApp
             app.UseAuthentication();
             app.UseAuthorization();
             app.MapControllers();
+            app.MapHealthChecks("/health");
 
             try
             {
@@ -144,29 +154,49 @@ namespace FitnessApp
             {
                 options.AddDefaultPolicy(policy =>
                 {
+                    // TODO: Modify this to only allow from front end domain
                     policy.AllowAnyOrigin()
                           .AllowAnyHeader()
                           .AllowAnyMethod();
                 });
             });
 
+
+            // builder.Services.AddCors(options =>
+            // {
+            //     options.AddDefaultPolicy(policy =>
+            //     {
+            //         policy.WithOrigins(
+            //             "https://myDomain.com",
+            //             "http://localhost:4200" // For local dev
+            //         )
+            //         .AllowAnyMethod()
+            //         .AllowAnyHeader();
+            //     });
+            // });
+
+
+            builder.Services.AddRouting(options =>
+            {
+                options.LowercaseUrls = true;
+                options.LowercaseQueryStrings = false;
+            });
+
             // database setup.
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-
             builder.Services.AddDbContext<FitnessAppDbContext>(options =>
                 options.UseNpgsql(connectionString));
 
             // services
             builder.Services.AddScoped<IWorkoutsService, WorkoutsService>();
-            builder.Services.AddScoped<IExercisesService, ExercisesService>();
+            builder.Services.AddScoped<IExerciseService, ExerciseService>();
             builder.Services.AddScoped<IUsersService, UsersService>();
 
             // repositories
-            // TODO: Remove Singleton usage and replace with scoped once the InMemory test data isn't being used.
-            builder.Services.AddSingleton<IWorkoutsRepository, InMemoryWorkoutsRepository>();
-            builder.Services.AddSingleton<IWorkoutExerciseRepository, InMemoryWorkoutExerciseRepository>();
-            builder.Services.AddSingleton<IUsersRepository, InMemoryUsersRepository>();
-            builder.Services.AddSingleton<IExercisesRepository, InMemoryExercisesRepository>();
+            builder.Services.AddScoped<IWorkoutsRepository, WorkoutsReposity>();
+            builder.Services.AddScoped<IWorkoutExerciseRepository, WorkoutExercisesReposity>();
+            builder.Services.AddScoped<IUsersRepository, UsersRepository>();
+            builder.Services.AddScoped<IExerciseRepository, ExerciseRepository>();
 
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
