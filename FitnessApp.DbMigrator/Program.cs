@@ -1,6 +1,7 @@
 ﻿using FitnessApp.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using DotNetEnv;
 
 namespace FitnessApp.DbMigrator;
 
@@ -8,28 +9,61 @@ class Program
 {
     static async Task<int> Main(string[] args)
     {
+        var searchDir = new DirectoryInfo(Directory.GetCurrentDirectory());
+        string? envPath = null;
+
+        while (searchDir != null)
+        {
+            var testPath = Path.Combine(searchDir.FullName, ".env");
+            if (File.Exists(testPath))
+            {
+                envPath = testPath;
+                break;
+            }
+            searchDir = searchDir.Parent;
+        }
+
+        if (envPath != null)
+        {
+            Console.WriteLine($"Loading environment variables from {envPath}");
+
+            // Load and SET environment variables in the current process
+            foreach (var line in File.ReadAllLines(envPath))
+            {
+                var trimmed = line.Trim();
+                if (string.IsNullOrWhiteSpace(trimmed) || trimmed.StartsWith("#"))
+                    continue;
+
+                var parts = trimmed.Split('=', 2);
+                if (parts.Length == 2)
+                {
+                    var key = parts[0].Trim();
+                    var value = parts[1].Trim().Trim('"', '\'');
+                    Environment.SetEnvironmentVariable(key, value);
+                }
+            }
+        }
+        else
+        {
+            Console.WriteLine($"No .env file found starting from {Directory.GetCurrentDirectory()}");
+        }
+
         var configuration = new ConfigurationBuilder()
-            .SetBasePath(Directory.GetCurrentDirectory())
-            .AddJsonFile("appsettings.json", optional: true)
             .AddEnvironmentVariables()
             .AddCommandLine(args)
             .Build();
 
-        var connectionString = configuration.GetConnectionString("DefaultConnection");
-        
+        var connectionString = configuration["ConnectionStrings:LocalConnection"]
+                            ?? configuration["ConnectionStrings:DefaultConnection"];
+
         if (string.IsNullOrEmpty(connectionString))
         {
             Console.Error.WriteLine("ERROR: Connection string not found!");
-            Console.Error.WriteLine("Set it via:");
-            Console.Error.WriteLine("  - appsettings.json");
-            Console.Error.WriteLine("  - Environment variable: ConnectionStrings__DefaultConnection");
-            Console.Error.WriteLine("  - Command line: --ConnectionStrings:DefaultConnection=\"...\"");
             return 1;
         }
 
         var optionsBuilder = new DbContextOptionsBuilder<FitnessAppDbContext>();
         optionsBuilder.UseNpgsql(connectionString);
-
         await using var dbContext = new FitnessAppDbContext(optionsBuilder.Options);
 
         try

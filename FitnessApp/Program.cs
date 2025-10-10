@@ -35,7 +35,7 @@ namespace FitnessApp
                     // (e.g. BodyParts.BodyPart.Biceps = 1 in database and backend, but will send as "Biceps" to front-end.)
                     options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
                 });
-                
+
             AddServices(builder);
 
             var app = builder.Build();
@@ -45,7 +45,7 @@ namespace FitnessApp
             {
                 using var scope = app.Services.CreateScope();
                 var dbContext = scope.ServiceProvider.GetRequiredService<FitnessAppDbContext>();
-                
+
                 // In dev, run migrations and seed everything
                 await dbContext.Database.MigrateAsync();
                 await DatabaseSeeder.SeedDatabaseAsync(dbContext);
@@ -65,6 +65,7 @@ namespace FitnessApp
             app.UseAuthentication();
             app.UseAuthorization();
             app.MapControllers();
+            app.MapHealthChecks("/health");
 
             try
             {
@@ -158,6 +159,27 @@ namespace FitnessApp
                           .AllowAnyHeader()
                           .AllowAnyMethod();
                 });
+            });
+
+
+            // builder.Services.AddCors(options =>
+            // {
+            //     options.AddDefaultPolicy(policy =>
+            //     {
+            //         policy.WithOrigins(
+            //             "https://myDomain.com",
+            //             "http://localhost:4200" // For local dev
+            //         )
+            //         .AllowAnyMethod()
+            //         .AllowAnyHeader();
+            //     });
+            // });
+
+
+            builder.Services.AddRouting(options =>
+            {
+                options.LowercaseUrls = true;
+                options.LowercaseQueryStrings = false;
             });
 
             // database setup.

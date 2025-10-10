@@ -1,10 +1,49 @@
 <main class="exercise-details-page" fxLayout="column" fxLayoutGap="24px">
-    <div class="exercise-image-container">
-        <img *ngIf="exercise && imageLoaded" class="exercise-image" [src]="imageSrc" [alt]="exercise.name"
-            (load)="onImageLoad()" />
+    <!-- Media Carousel -->
+    <div class="media-carousel-container" (touchstart)="onTouchStart($event)" (touchend)="onTouchEnd($event)">
 
-        <mat-progress-spinner *ngIf="!imageLoaded" mode="indeterminate" diameter="50">
-        </mat-progress-spinner>
+        <!-- Navigation buttons -->
+        <button mat-icon-button class="carousel-btn prev-btn" *ngIf="canGoPrevious" (click)="previousMedia()">
+            <mat-icon>chevron_left</mat-icon>
+        </button>
+
+        <button mat-icon-button class="carousel-btn next-btn" *ngIf="canGoNext" (click)="nextMedia()">
+            <mat-icon>chevron_right</mat-icon>
+        </button>
+
+        <!-- Media display -->
+        <div class="media-wrapper">
+            <!-- Image -->
+            <img *ngIf="currentMedia?.type === 'image' && mediaLoaded" class="exercise-media" [src]="currentMedia?.url"
+                [alt]="exercise?.name" (load)="onMediaLoad()" />
+
+            <!-- Video -->
+            <video *ngIf="currentMedia?.type === 'video' && mediaLoaded" class="exercise-media"
+                [src]="currentMedia?.url" controls (loadeddata)="onMediaLoad()">
+            </video>
+
+            <!-- Loading spinner -->
+            <mat-progress-spinner *ngIf="!mediaLoaded && currentMedia" mode="indeterminate" diameter="50">
+            </mat-progress-spinner>
+
+            <!-- No media placeholder -->
+            <div *ngIf="!currentMedia" class="no-media">
+                <mat-icon>image_not_supported</mat-icon>
+                <p>No media available</p>
+            </div>
+        </div>
+
+        <!-- Media counter -->
+        <div class="media-counter" *ngIf="mediaItems.length > 0">
+            {{ currentMediaIndex + 1 }} / {{ mediaItems.length }}
+        </div>
+
+        <!-- Indicator dots -->
+        <div class="media-indicators" *ngIf="mediaItems.length > 1">
+            <span *ngFor="let item of mediaItems; let i = index" class="indicator-dot"
+                [class.active]="i === currentMediaIndex" (click)="currentMediaIndex = i; mediaLoaded = false;">
+            </span>
+        </div>
     </div>
 
     <section>

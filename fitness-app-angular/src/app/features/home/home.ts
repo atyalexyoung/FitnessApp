@@ -67,14 +67,24 @@ export class HomeComponent {
   }
 
   ngOnInit() {
-    this.exerciseService.getAllExercises().subscribe(exercises => {
-      this.exerciseList = exercises;
-      this.filteredExerciseList = exercises;
+    console.log('Fetching exercises...');
+    this.exerciseService.getAllExercises().subscribe({
+      next: (exercises) => {
+        console.log('Exercises received:', exercises);
+        this.exerciseList = exercises;
+        this.filteredExerciseList = exercises;
+      },
+      error: (error) => {
+        console.error('Error fetching exercises:', error);
+      },
+      complete: () => {
+        console.log('Exercise fetch complete');
+      }
     });
   }
 
-  ngOnDestroy(){
-    
+  ngOnDestroy() {
+
   }
 
   filterExercises() {

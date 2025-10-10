@@ -19,7 +19,7 @@ namespace FitnessApp.Controllers
             _exercisesService = exercisesService;
         }
 
-        [HttpGet("exercises")]
+        [HttpGet]
         public async Task<IActionResult> GetExercises(
             [FromQuery] List<string>? bodyPartTypes,
             [FromQuery] List<string>? bodyParts,
@@ -56,7 +56,7 @@ namespace FitnessApp.Controllers
             return Ok(exercises);
         }
 
-        [HttpGet("exercises/{id}")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetExerciseById(string id)
         {
             if (string.IsNullOrWhiteSpace(id))
