@@ -18,6 +18,7 @@ namespace FitnessApp.Repositories
         }
 
         public async Task<IEnumerable<Exercise>> GetFilteredAsync(
+            CancellationToken cancellationToken,
             List<BodyParts.BodyPartType>? bodyPartTypes = null,
             List<BodyParts.BodyPart>? bodyParts = null,
             List<ExerciseTypes.ExerciseTypeTag>? exerciseTags = null)
@@ -62,15 +63,15 @@ namespace FitnessApp.Repositories
                 );
             }
             
-            return await query.ToListAsync();
+            return await query.ToListAsync(cancellationToken);
         }
 
-        public async Task<Exercise?> GetByIdAsync(string id)
+        public async Task<Exercise?> GetByIdAsync(string id, CancellationToken cancellationToken)
         {
             return await _dbContext.Exercises
                 .Include(e => e.ExerciseBodyParts)
                 .Include(e => e.ExerciseTags)
-                .FirstOrDefaultAsync(e => e.Id == id);
+                .FirstOrDefaultAsync(e => e.Id == id, cancellationToken);
         }
     }
 }

@@ -20,11 +20,11 @@ namespace FitnessApp.Controllers
         }
 
         [HttpPost("register")]
-        public async Task<IActionResult> Register([FromBody] LoginRequest req)
+        public async Task<IActionResult> Register([FromBody] LoginRequest req, CancellationToken cancellationToken)
         {
             _logger.LogDebug("POST to register user recieved at {Time}", DateTime.UtcNow);
 
-            var result = await _userService.RegisterAsync(req.Username, req.Password);
+            var result = await _userService.RegisterAsync(req.Username, req.Password, cancellationToken);
 
             if (result == null)
             {
@@ -45,9 +45,9 @@ namespace FitnessApp.Controllers
         }
 
         [HttpPost("login")]
-        public async Task<IActionResult> Login([FromBody] LoginRequest req)
+        public async Task<IActionResult> Login([FromBody] LoginRequest req, CancellationToken cancellationToken)
         {
-            var token = await _userService.LoginAsync(req.Username, req.Password);
+            var token = await _userService.LoginAsync(req.Username, req.Password, cancellationToken);
 
             if (token == null) { return Unauthorized("Invalid credentials."); }
 

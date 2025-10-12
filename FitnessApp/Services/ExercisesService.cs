@@ -27,29 +27,22 @@ namespace FitnessApp.Services
         /// <param name="exerciseTags">The types/tags of the exercises to get.</param>
         /// <returns>A task of enumerable <see cref="Exercise"/> objects.</returns>
         public async Task<Result<IEnumerable<ExerciseResponse>>> GetExercisesAsync(
+            CancellationToken cancellationToken,
             List<BodyParts.BodyPartType>? bodyPartTypes = null,
             List<BodyParts.BodyPart>? bodyParts = null,
             List<ExerciseTypes.ExerciseTypeTag>? exerciseTags = null)
         {
-            try
-            {
-                _logger.LogDebug("Getting all exercises.");
-                var exercises = await _exerciseRepo.GetFilteredAsync(bodyPartTypes, bodyParts, exerciseTags);
+            _logger.LogDebug("Getting all exercises.");
+            var exercises = await _exerciseRepo.GetFilteredAsync(cancellationToken, bodyPartTypes, bodyParts, exerciseTags);
 
-                if (exercises == null)
-                {
-                    _logger.LogError("Recieved null exercises. Returning Result.Fail with error not found.");
-                    return Result.Fail<IEnumerable<ExerciseResponse>>("Exercises returned as null", ErrorType.NotFound);
-                }
-
-                var response = exercises.Select(e => e.ToResponse());
-                return Result.Ok(response);
-            }
-            catch (Exception ex)
+            if (exercises == null)
             {
-                _logger.LogError("Error when getting filtered exercises with exception: {ex}", ex);
-                return Result.Fail<IEnumerable<ExerciseResponse>>("Unexpected error when getting exercises", ErrorType.Internal);
+                _logger.LogError("Recieved null exercises. Returning Result.Fail with error not found.");
+                return Result.Fail<IEnumerable<ExerciseResponse>>("Exercises returned as null", ErrorType.NotFound);
             }
+
+            var response = exercises.Select(e => e.ToResponse());
+            return Result.Ok(response);
         }
 
         /// <summary>
@@ -57,27 +50,19 @@ namespace FitnessApp.Services
         /// </summary>
         /// <param name="id">The id of the exercise to get.</param>
         /// <returns>A task of a <see cref="Exercise"/> object.</returns>
-        public async Task<Result<ExerciseResponse>> GetExerciseByIdAsync(string id)
+        public async Task<Result<ExerciseResponse>> GetExerciseByIdAsync(string id, CancellationToken cancellationToken)
         {
-            try
-            {
-                _logger.LogDebug("Getting all exercises.");
-                var exercise = await _exerciseRepo.GetByIdAsync(id);
+            _logger.LogDebug("Getting all exercises.");
+            var exercise = await _exerciseRepo.GetByIdAsync(id, cancellationToken);
 
-                if (exercise == null)
-                {
-                    _logger.LogError("Recieved null exercise for exercise with id: {}. Returning Result.Fail with error not found.", id);
-                    return Result.Fail<ExerciseResponse>("Exercises returned as null", ErrorType.NotFound);
-                }
-
-                var response = exercise.ToResponse();
-                return Result.Ok(response);
-            }
-            catch (Exception ex)
+            if (exercise == null)
             {
-                _logger.LogError("Error when getting exercise by id of: {id} with exception: {ex}", id, ex);
-                return Result.Fail<ExerciseResponse>("Unexpected error when getting exercises", ErrorType.Internal);
+                _logger.LogError("Recieved null exercise for exercise with id: {}. Returning Result.Fail with error not found.", id);
+                return Result.Fail<ExerciseResponse>("Exercises returned as null", ErrorType.NotFound);
             }
+
+            var response = exercise.ToResponse();
+            return Result.Ok(response);
         }
     }
 }

@@ -15,6 +15,7 @@ namespace FitnessApp.Interfaces.Services
         /// <param name="ExerciseTags">The types/tags of the exercises to get.</param>
         /// <returns>A task of enumerable <see cref="Exercise"/> objects.</returns>
         public Task<Result<IEnumerable<ExerciseResponse>>> GetExercisesAsync(
+            CancellationToken cancellationToken,
             List<BodyParts.BodyPartType>? bodyPartTypes = null,
             List<BodyParts.BodyPart>? bodyParts = null,
             List<ExerciseTypes.ExerciseTypeTag>? ExerciseTags = null);
@@ -24,6 +25,6 @@ namespace FitnessApp.Interfaces.Services
         /// </summary>
         /// <param name="id">The id of the exercise to get.</param>
         /// <returns>A task of a <see cref="Exercise"/> object.</returns>
-        public Task<Result<ExerciseResponse>> GetExerciseByIdAsync(string id);
+        public Task<Result<ExerciseResponse>> GetExerciseByIdAsync(string id, CancellationToken cancellationToken);
     }
 }

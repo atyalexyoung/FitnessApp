@@ -30,10 +30,10 @@ namespace FitnessApp.Services
         /// <param name="username">The username of new user.</param>
         /// <param name="password">Password of new user.</param>
         /// <returns><see cref="Result"/> type.</returns>
-        public async Task<Result<User?>> RegisterAsync(string username, string password)
+        public async Task<Result<User?>> RegisterAsync(string username, string password, CancellationToken cancellationToken)
         {
             // if we can get a user, then the username is already taken.
-            if (await _users.GetByUsernameAsync(username) != null)
+            if (await _users.GetByUsernameAsync(username, cancellationToken) != null)
             {
                 _logger.LogTrace("Username: {username} already exists in {class} at {time}", username, nameof(RegisterAsync), DateTime.UtcNow);
                 return Result.Fail<User?>("Username taken", ErrorType.Conflict);
@@ -47,7 +47,7 @@ namespace FitnessApp.Services
                 CreatedAt = DateTime.UtcNow
             };
 
-            if (await _users.AddAsync(user))
+            if (await _users.AddAsync(user, cancellationToken))
             {
                 _logger.LogTrace("New User added with username: {username} at {time}", username, DateTime.UtcNow);
                 return Result.Ok<User?>(user);
@@ -65,9 +65,9 @@ namespace FitnessApp.Services
         /// <param name="username">Usename of attempted login.</param>
         /// <param name="password">Password of attempted login.</param>
         /// <returns>String of JWT token.</returns>
-        public async Task<Result<string?>> LoginAsync(string username, string password)
+        public async Task<Result<string?>> LoginAsync(string username, string password, CancellationToken cancellationToken)
         {
-            var user = await _users.GetByUsernameAsync(username);
+            var user = await _users.GetByUsernameAsync(username, cancellationToken);
 
             // validate user
             if (user == null)
@@ -93,40 +93,30 @@ namespace FitnessApp.Services
             return Result.Ok<string?>(jwt);
         }
 
-        public Task<User?> GetByIdAsync(string id)
+        public Task<User?> GetByIdAsync(string id, CancellationToken cancellationToken)
         {
-            return _users.GetByIdAsync(id);
+            return _users.GetByIdAsync(id, cancellationToken);
         }
 
         private bool TryGenerateJwt(User user, out string jwt)
         {
-            try
+            var key = Encoding.UTF8.GetBytes(_config["Jwt:Key"]!);
+            var claims = new[]
             {
-                var key = Encoding.UTF8.GetBytes(_config["Jwt:Key"]!);
-                var claims = new[]
-                {
-                    new Claim(ClaimTypes.NameIdentifier, user.Id),
-                    new Claim(ClaimTypes.Name, user.UserName),
-                    new Claim(ClaimTypes.Role, user.Role),
-                };
+                new Claim(ClaimTypes.NameIdentifier, user.Id),
+                new Claim(ClaimTypes.Name, user.UserName),
+                new Claim(ClaimTypes.Role, user.Role),
+            };
 
-                var token = new JwtSecurityToken(
-                    claims: claims,
-                    expires: DateTime.UtcNow.AddHours(1),
-                    signingCredentials: new SigningCredentials(
-                        new SymmetricSecurityKey(key),
-                        SecurityAlgorithms.HmacSha256));
+            var token = new JwtSecurityToken(
+                claims: claims,
+                expires: DateTime.UtcNow.AddHours(1),
+                signingCredentials: new SigningCredentials(
+                    new SymmetricSecurityKey(key),
+                    SecurityAlgorithms.HmacSha256));
 
-                jwt = new JwtSecurityTokenHandler().WriteToken(token);
-                return true;
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError("Error when generating JWT with exception: {exception}", ex);
-                jwt = default!;
-                return false;
-            }
-
+            jwt = new JwtSecurityTokenHandler().WriteToken(token);
+            return true;
         }
 
         private string HashPassword(string password)

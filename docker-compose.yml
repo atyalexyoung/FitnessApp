@@ -10,7 +10,6 @@ services:
       ConnectionStrings__DefaultConnection: ${ConnectionStrings__DefaultConnection}
     ports:
       - "8080:8080"
-      - "8081:8081"
   postgres:
     image: postgres:15-alpine
     environment:

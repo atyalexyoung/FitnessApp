@@ -16,25 +16,17 @@ namespace FitnessApp.Repositories
             _dbContext = dbContext;
         }
 
-        public async Task<bool> AddAsync(User user)
+        public async Task<bool> AddAsync(User user, CancellationToken cancellationToken)
         {
-            try
-            {
-                _dbContext.Users.Add(user);
-                await _dbContext.SaveChangesAsync();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                _logger.LogWarning("Error when adding user with id: {id} to database with exception: {ex}", user.Id, ex);
-                return false;
-            }
+            _dbContext.Users.Add(user);
+            await _dbContext.SaveChangesAsync(cancellationToken);
+            return true;
         }
 
-        public async Task<User?> GetByIdAsync(string id)
-            => await _dbContext.Users.FirstOrDefaultAsync(u => u.Id == id);
+        public async Task<User?> GetByIdAsync(string id, CancellationToken cancellationToken)
+            => await _dbContext.Users.FirstOrDefaultAsync(u => u.Id == id, cancellationToken);
 
-        public async Task<User?> GetByUsernameAsync(string username)
-           => await _dbContext.Users.FirstOrDefaultAsync(u => u.UserName == username);
+        public async Task<User?> GetByUsernameAsync(string username, CancellationToken cancellationToken)
+           => await _dbContext.Users.FirstOrDefaultAsync(u => u.UserName == username, cancellationToken);
     }
 }

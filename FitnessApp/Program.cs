@@ -1,6 +1,7 @@
 using FitnessApp.Data;
 using FitnessApp.Interfaces.Repositories;
 using FitnessApp.Interfaces.Services;
+using FitnessApp.Middleware;
 using FitnessApp.Repositories;
 using FitnessApp.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -37,6 +38,7 @@ namespace FitnessApp
                 });
 
             AddServices(builder);
+            
 
             var app = builder.Build();
 
@@ -60,6 +62,7 @@ namespace FitnessApp
             }
 
             // setup and run app.
+            app.UseMiddleware<ExceptionMiddleware>();
             app.UseCors();
             app.UseHttpsRedirection();
             app.UseAuthentication();
@@ -83,6 +86,8 @@ namespace FitnessApp
         /// <param name="builder">The builder to add the services to.</param>
         private static void AddServices(WebApplicationBuilder builder)
         {
+
+            builder.Services.AddHealthChecks();
             // ---------------------------
             // AUTHENTICATION SETUP
             // ---------------------------
@@ -174,7 +179,7 @@ namespace FitnessApp
             //         .AllowAnyHeader();
             //     });
             // });
-
+            builder.Services.AddHealthChecks();
 
             builder.Services.AddRouting(options =>
             {

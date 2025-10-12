@@ -23,15 +23,15 @@ namespace FitnessApp.Controllers
         public async Task<IActionResult> GetExercises(
             [FromQuery] List<string>? bodyPartTypes,
             [FromQuery] List<string>? bodyParts,
-            [FromQuery] List<string>? exerciseTags)
+            [FromQuery] List<string>? exerciseTags,
+            CancellationToken cancellationToken)
         {
-
             var parsedBodyPartTypes = EnumParser.ParseEnums<BodyParts.BodyPartType>(bodyPartTypes);
             var parsedBodyParts = EnumParser.ParseEnums<BodyParts.BodyPart>(bodyParts);
             var parsedExerciseTags = EnumParser.ParseEnums<ExerciseTypes.ExerciseTypeTag>(exerciseTags);
 
             var result = await _exercisesService.GetExercisesAsync(
-                parsedBodyPartTypes, parsedBodyParts, parsedExerciseTags);
+                cancellationToken, parsedBodyPartTypes, parsedBodyParts, parsedExerciseTags);
 
             if (result == null)
             {
@@ -57,14 +57,14 @@ namespace FitnessApp.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetExerciseById(string id)
+        public async Task<IActionResult> GetExerciseById(string id, CancellationToken cancellationToken)
         {
             if (string.IsNullOrWhiteSpace(id))
             {
                 return StatusCode(StatusCodes.Status400BadRequest, "provided invalid exercise ID");
             }
 
-            var result = await _exercisesService.GetExerciseByIdAsync(id);
+            var result = await _exercisesService.GetExerciseByIdAsync(id, cancellationToken);
 
             if (result == null)
             {
