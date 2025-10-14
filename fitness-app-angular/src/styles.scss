@@ -6,12 +6,14 @@
 @use '@angular/material' as mat;
 
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
 
 html {
   @include mat.theme((color: (primary: mat.$cyan-palette,
         tertiary: mat.$orange-palette,
       ),
-      typography: Roboto,
+      typography: 'Quicksand, sans-serif',
       density: 0,
     ));
 }
@@ -42,5 +44,5 @@ body {
 
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: 'Quicksand', "Helvetica Neue", sans-serif;
 }
