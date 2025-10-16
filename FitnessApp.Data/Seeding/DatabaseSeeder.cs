@@ -1,10 +1,9 @@
-﻿using FitnessApp.Shared.Enums;
-using FitnessApp.Shared.Models;
+﻿using FitnessApp.Shared.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace FitnessApp.Data
+namespace FitnessApp.Data.Seeding
 {
     public static class DatabaseSeeder
     {

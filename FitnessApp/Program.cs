@@ -1,3 +1,4 @@
+using FitnessApp.Data.Seeding;
 using FitnessApp.Data;
 using FitnessApp.Interfaces.Repositories;
 using FitnessApp.Interfaces.Services;
@@ -155,32 +156,20 @@ namespace FitnessApp
                     });
             });
 
+
             builder.Services.AddCors(options =>
             {
                 options.AddDefaultPolicy(policy =>
                 {
-                    // TODO: Modify this to only allow from front end domain
-                    policy.AllowAnyOrigin()
-                          .AllowAnyHeader()
-                          .AllowAnyMethod();
+                    policy.WithOrigins(
+                        "https://fitness-friend.com",
+                        "http://localhost:4200" // For local dev
+                    )
+                    .AllowAnyMethod()
+                    .AllowAnyHeader();
                 });
             });
-
-
-            // builder.Services.AddCors(options =>
-            // {
-            //     options.AddDefaultPolicy(policy =>
-            //     {
-            //         policy.WithOrigins(
-            //             "https://myDomain.com",
-            //             "http://localhost:4200" // For local dev
-            //         )
-            //         .AllowAnyMethod()
-            //         .AllowAnyHeader();
-            //     });
-            // });
-            builder.Services.AddHealthChecks();
-
+            
             builder.Services.AddRouting(options =>
             {
                 options.LowercaseUrls = true;
