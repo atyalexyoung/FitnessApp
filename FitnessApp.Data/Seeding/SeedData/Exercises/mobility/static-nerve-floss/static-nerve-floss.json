@@ -1,0 +1,17 @@
+{
+    "id": "static-nerve-floss",
+    "name": "Static Nerve Floss",
+    "description": "Mobility drill targeting nerve tension along limbs, promoting flexibility and joint health.",
+    "bodyParts": [
+        "Hamstrings",
+        "Hip Flexors",
+        "Shoulders",
+        "Forearms"
+    ],
+    "tags": [
+        "Mobility",
+        "Stretching"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

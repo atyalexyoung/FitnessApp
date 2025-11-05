@@ -1,0 +1,20 @@
+{
+    "id": "grapevine",
+    "name": "Grapevine / Karaoke",
+    "description": "Footwork drill to enhance coordination, agility, and lateral movement, often used in warm-ups or conditioning.",
+    "bodyParts": [
+        "Quads",
+        "Glutes",
+        "Calves",
+        "Adductors",
+        "Abdominals"
+    ],
+    "tags": [
+        "Cardio",
+        "Bodyweight",
+        "Agility",
+        "Endurance"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

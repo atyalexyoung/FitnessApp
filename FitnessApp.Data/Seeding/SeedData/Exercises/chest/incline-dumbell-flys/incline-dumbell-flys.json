@@ -1,0 +1,14 @@
+{
+    "id": "incline-dumbbell-flys",
+    "name": "Incline Dumbbell Flys",
+    "description": "An isolation movement emphasizing the upper portion of the chest through a wide arc of motion.",
+    "bodyParts": [
+        "Chest",
+        "Deltoids"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

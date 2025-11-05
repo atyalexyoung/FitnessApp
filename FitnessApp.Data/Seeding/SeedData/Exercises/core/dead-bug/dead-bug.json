@@ -1,0 +1,19 @@
+{
+    "id": "dead-bug",
+    "name": "Dead Bug",
+    "description": "Anti-extension core exercise improving coordination and stability by moving arms and legs independently while maintaining a neutral spine.",
+    "bodyParts": [
+        "Abdominals",
+        "Obliques",
+        "Hip Flexors",
+        "LowerBack"
+    ],
+    "tags": [
+        "Core",
+        "Strength",
+        "Bodyweight",
+        "Mobility"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

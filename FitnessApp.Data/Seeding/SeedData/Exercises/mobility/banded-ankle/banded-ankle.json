@@ -1,0 +1,18 @@
+{
+    "id": "banded-ankle",
+    "name": "Banded Ankle Mobility",
+    "description": "Exercise using a resistance band to improve ankle dorsiflexion, stability, and range of motion.",
+    "bodyParts": [
+        "Calves",
+        "Ankles",
+        "Quads",
+        "Glutes"
+    ],
+    "tags": [
+        "Mobility",
+        "Stretching",
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

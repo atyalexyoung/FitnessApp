@@ -1,0 +1,16 @@
+{
+    "id": "face-pull",
+    "name": "Face Pull",
+    "description": "A cable exercise that targets the rear delts, traps, and rhomboids, improving posture and shoulder health.",
+    "bodyParts": [
+        "Deltoids",
+        "Traps",
+        "Rhomboids"
+    ],
+    "tags": [
+        "Strength",
+        "Rehab"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

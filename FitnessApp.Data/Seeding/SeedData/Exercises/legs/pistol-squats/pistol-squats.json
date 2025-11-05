@@ -1,0 +1,16 @@
+{
+    "id": "pistol-squats",
+    "name": "Pistol Squats",
+    "description": "Advanced single-leg squat emphasizing quads, glutes, hamstrings, and balance.",
+    "bodyParts": [
+        "Quads",
+        "Glutes",
+        "Hamstrings"
+    ],
+    "tags": [
+        "Strength",
+        "Balance"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

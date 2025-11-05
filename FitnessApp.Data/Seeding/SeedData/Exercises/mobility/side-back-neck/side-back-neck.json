@@ -1,0 +1,16 @@
+{
+    "id": "side-back-neck",
+    "name": "Side + Back Neck Stretch",
+    "description": "Static stretch targeting lateral and posterior neck muscles.",
+    "bodyParts": [
+        "Traps",
+        "Neck",
+        "Rhomboids"
+    ],
+    "tags": [
+        "Stretching",
+        "Mobility"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

@@ -1,0 +1,16 @@
+{
+    "id": "chest-supported-row",
+    "name": "Chest Supported Row",
+    "description": "A machine or bench-supported rowing exercise targeting mid-back muscles while reducing lower back strain.",
+    "bodyParts": [
+        "Rhomboids",
+        "Traps",
+        "Lats",
+        "Deltoids"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

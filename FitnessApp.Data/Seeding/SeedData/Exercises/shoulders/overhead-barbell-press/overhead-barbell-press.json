@@ -1,0 +1,16 @@
+{
+    "id": "overhead-barbell-press",
+    "name": "Overhead Barbell Press",
+    "description": "A compound pressing movement targeting the anterior and medial deltoids, with secondary triceps and upper traps activation.",
+    "bodyParts": [
+        "Deltoids",
+        "Triceps",
+        "Traps"
+    ],
+    "tags": [
+        "Strength",
+        "Powerlifting"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

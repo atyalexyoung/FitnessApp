@@ -1,0 +1,21 @@
+{
+    "id": "mountain-climbers",
+    "name": "Mountain Climbers",
+    "description": "High-intensity bodyweight exercise combining core engagement, cardio, and lower body endurance.",
+    "bodyParts": [
+        "Abdominals",
+        "Obliques",
+        "Deltoids",
+        "Chest",
+        "Quads",
+        "Glutes"
+    ],
+    "tags": [
+        "Cardio",
+        "Bodyweight",
+        "HIIT",
+        "Core"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

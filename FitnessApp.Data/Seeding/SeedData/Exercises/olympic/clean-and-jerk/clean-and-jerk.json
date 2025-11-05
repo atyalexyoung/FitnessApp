@@ -1,0 +1,20 @@
+{
+    "id": "clean-and-jerk",
+    "name": "Clean and Jerk",
+    "description": "Olympic lift combining a barbell clean with a split or push jerk overhead.",
+    "bodyParts": [
+        "Quads",
+        "Hamstrings",
+        "Glutes",
+        "Lats",
+        "Deltoids",
+        "Traps",
+        "Abdominals"
+    ],
+    "tags": [
+        "Strength",
+        "OlympicLifting"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

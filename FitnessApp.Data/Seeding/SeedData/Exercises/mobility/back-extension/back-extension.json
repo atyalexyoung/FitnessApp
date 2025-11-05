@@ -1,0 +1,16 @@
+{
+    "id": "back-extension",
+    "name": "Back Extension Stretch",
+    "description": "Stretch and mobilize the lower back, glutes, and hamstrings.",
+    "bodyParts": [
+        "LowerBack",
+        "Glutes",
+        "Hamstrings"
+    ],
+    "tags": [
+        "Stretching",
+        "Mobility"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

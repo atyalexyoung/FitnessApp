@@ -1,0 +1,14 @@
+{
+    "id": "dumbbell-flys",
+    "name": "Dumbbell Flys",
+    "description": "An isolation exercise that stretches and contracts the chest muscles for hypertrophy and flexibility gains.",
+    "bodyParts": [
+        "Chest",
+        "Deltoids"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

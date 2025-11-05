@@ -1,0 +1,19 @@
+{
+    "id": "hollow-body-hold",
+    "name": "Hollow Body Hold",
+    "description": "Isometric core exercise emphasizing total abdominal contraction and stabilization.",
+    "bodyParts": [
+        "Abdominals",
+        "Obliques",
+        "Hip Flexors",
+        "LowerBack"
+    ],
+    "tags": [
+        "Core",
+        "Strength",
+        "Bodyweight",
+        "Endurance"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

@@ -1,0 +1,20 @@
+{
+    "id": "windmills",
+    "name": "Windmills",
+    "description": "Rotational mobility exercise targeting shoulders, thoracic spine, and hips with core engagement.",
+    "bodyParts": [
+        "Shoulders",
+        "Thoracic Spine",
+        "Glutes",
+        "Hip Flexors",
+        "Core"
+    ],
+    "tags": [
+        "Mobility",
+        "Stretching",
+        "Balance",
+        "Core"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

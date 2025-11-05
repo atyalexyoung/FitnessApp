@@ -1,0 +1,18 @@
+{
+    "id": "jogging",
+    "name": "Jogging",
+    "description": "Steady-state cardio performed at a moderate pace to build cardiovascular endurance and leg stamina.",
+    "bodyParts": [
+        "Quads",
+        "Glutes",
+        "Hamstrings",
+        "Calves",
+        "Abdominals"
+    ],
+    "tags": [
+        "Cardio",
+        "Endurance"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

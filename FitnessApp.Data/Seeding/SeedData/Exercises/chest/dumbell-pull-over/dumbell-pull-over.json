@@ -1,0 +1,14 @@
+{
+    "id": "dumbbell-pull-over",
+    "name": "Dumbbell Pull-Over",
+    "description": "A chest and lats crossover movement that stretches and strengthens the chest and ribcage area.",
+    "bodyParts": [
+        "Chest",
+        "Lats"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

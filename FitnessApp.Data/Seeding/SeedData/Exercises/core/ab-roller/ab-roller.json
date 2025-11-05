@@ -1,0 +1,18 @@
+{
+    "id": "ab-roller",
+    "name": "Ab Roller",
+    "description": "Dynamic core exercise using ab wheel to strengthen entire core and improve anti-extension stability.",
+    "bodyParts": [
+        "Abdominals",
+        "Obliques",
+        "LowerBack",
+        "Hip Flexors"
+    ],
+    "tags": [
+        "Core",
+        "Strength",
+        "Equipment"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

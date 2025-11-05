@@ -1,0 +1,20 @@
+{
+    "id": "rear-bridge",
+    "name": "Rear Bridge",
+    "description": "Glute, lower back, and shoulder mobility exercise improving posterior chain strength and thoracic extension.",
+    "bodyParts": [
+        "Glutes",
+        "LowerBack",
+        "Shoulders",
+        "Thoracic Spine",
+        "Hamstrings"
+    ],
+    "tags": [
+        "Mobility",
+        "Stretching",
+        "Strength",
+        "Core"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

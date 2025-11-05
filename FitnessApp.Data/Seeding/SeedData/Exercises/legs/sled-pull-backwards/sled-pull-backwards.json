@@ -1,0 +1,16 @@
+{
+    "id": "sled-pull-backwards",
+    "name": "Sled Pull Backwards",
+    "description": "Leg conditioning exercise pulling weighted sled backward, emphasizing hamstrings and glutes.",
+    "bodyParts": [
+        "Glutes",
+        "Hamstrings",
+        "Calves"
+    ],
+    "tags": [
+        "Strength",
+        "Endurance"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

@@ -1,0 +1,14 @@
+{
+    "id": "hip-flexor-frontal-raise",
+    "name": "Hip Flexor Frontal Raise",
+    "description": "Hip flexor isolation performed standing or seated, lifting leg forward against resistance.",
+    "bodyParts": [
+        "Quads",
+        "Hip Flexors"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

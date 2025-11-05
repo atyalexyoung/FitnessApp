@@ -1,0 +1,13 @@
+{
+    "id": "standing-calf-raise",
+    "name": "Standing Calf Raise",
+    "description": "Targets gastrocnemius muscle while standing, can be performed on machine, barbell, or bodyweight.",
+    "bodyParts": [
+        "Calves"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

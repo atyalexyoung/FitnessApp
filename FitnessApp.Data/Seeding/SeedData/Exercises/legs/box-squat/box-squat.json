@@ -1,0 +1,16 @@
+{
+    "id": "box-squat",
+    "name": "Box Squat",
+    "description": "Squat variation using box for depth guidance, emphasizing quads, glutes, and hamstrings.",
+    "bodyParts": [
+        "Quads",
+        "Glutes",
+        "Hamstrings"
+    ],
+    "tags": [
+        "Strength",
+        "Powerlifting"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

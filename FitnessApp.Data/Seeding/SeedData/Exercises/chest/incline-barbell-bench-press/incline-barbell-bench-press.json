@@ -1,0 +1,16 @@
+{
+    "id": "incline-barbell-bench-press",
+    "name": "Incline Barbell Bench Press",
+    "description": "A compound upper-chest pressing movement that shifts emphasis toward the clavicular fibers of the pectorals.",
+    "bodyParts": [
+        "Chest",
+        "Deltoids",
+        "Triceps"
+    ],
+    "tags": [
+        "Strength",
+        "Powerlifting"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

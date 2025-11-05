@@ -1,0 +1,16 @@
+{
+    "id": "reverse-hyperextensions",
+    "name": "Reverse Hyperextensions",
+    "description": "A posterior chain movement emphasizing lower back, glutes, and hamstrings using dynamic leg extension from a prone position.",
+    "bodyParts": [
+        "LowerBack",
+        "Glutes",
+        "Hamstrings"
+    ],
+    "tags": [
+        "Strength",
+        "Rehab"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

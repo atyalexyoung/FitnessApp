@@ -1,0 +1,14 @@
+{
+    "id": "neck-flexion",
+    "name": "Neck Flexion",
+    "description": "Flexion movement targeting anterior neck muscles, including sternocleidomastoid.",
+    "bodyParts": [
+        "Neck"
+    ],
+    "tags": [
+        "Mobility",
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

@@ -1,0 +1,16 @@
+{
+    "id": "cable-crunch",
+    "name": "Cable Crunch",
+    "description": "Weighted core exercise targeting the rectus abdominis using a cable machine for resistance.",
+    "bodyParts": [
+        "Abdominals"
+    ],
+    "tags": [
+        "Core",
+        "Strength",
+        "Cable",
+        "Resistance"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

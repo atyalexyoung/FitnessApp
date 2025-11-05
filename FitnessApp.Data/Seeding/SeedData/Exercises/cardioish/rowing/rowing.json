@@ -1,0 +1,22 @@
+{
+    "id": "rowing",
+    "name": "Rowing",
+    "description": "Full-body cardiovascular exercise using a rowing machine, emphasizing legs, back, and arms in a coordinated motion.",
+    "bodyParts": [
+        "Quads",
+        "Glutes",
+        "Hamstrings",
+        "Lats",
+        "Rhomboids",
+        "Deltoids",
+        "Biceps",
+        "Abdominals"
+    ],
+    "tags": [
+        "Cardio",
+        "Endurance",
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

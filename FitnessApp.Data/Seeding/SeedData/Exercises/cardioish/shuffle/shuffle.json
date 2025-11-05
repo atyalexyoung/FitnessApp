@@ -1,0 +1,21 @@
+{
+    "id": "shuffle",
+    "name": "Lateral Shuffle",
+    "description": "Quick lateral footwork to improve agility, coordination, and cardiovascular endurance.",
+    "bodyParts": [
+        "Quads",
+        "Glutes",
+        "Calves",
+        "Abductors",
+        "Adductors"
+    ],
+    "tags": [
+        "Cardio",
+        "Bodyweight",
+        "Agility",
+        "Speed",
+        "Endurance"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

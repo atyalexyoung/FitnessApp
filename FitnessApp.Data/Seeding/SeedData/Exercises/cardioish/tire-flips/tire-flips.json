@@ -1,0 +1,23 @@
+{
+    "id": "tire-flips",
+    "name": "Tire Flips",
+    "description": "Explosive full-body exercise flipping a heavy tire, improving strength, power, and cardiovascular endurance.",
+    "bodyParts": [
+        "Quads",
+        "Glutes",
+        "Hamstrings",
+        "Deltoids",
+        "Biceps",
+        "Forearms",
+        "Abdominals",
+        "LowerBack"
+    ],
+    "tags": [
+        "Cardio",
+        "Strength",
+        "HIIT",
+        "Plyometrics"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

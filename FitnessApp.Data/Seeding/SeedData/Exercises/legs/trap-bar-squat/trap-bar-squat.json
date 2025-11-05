@@ -1,0 +1,17 @@
+{
+    "id": "trap-bar-squat",
+    "name": "Trap Bar Squat",
+    "description": "Using trap bar to perform squat/deadlift hybrid, targeting quads, glutes, and hamstrings safely.",
+    "bodyParts": [
+        "Quads",
+        "Glutes",
+        "Hamstrings",
+        "LowerBack"
+    ],
+    "tags": [
+        "Strength",
+        "Powerlifting"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

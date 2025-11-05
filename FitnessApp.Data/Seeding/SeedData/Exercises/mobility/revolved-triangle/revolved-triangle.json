@@ -1,0 +1,19 @@
+{
+    "id": "revolved-triangle",
+    "name": "Revolved Triangle Pose",
+    "description": "Yoga pose adding spinal rotation to Triangle Pose for thoracic, hip, and hamstring mobility with balance challenge.",
+    "bodyParts": [
+        "Hamstrings",
+        "Glutes",
+        "Hip Flexors",
+        "Thoracic Spine",
+        "Shoulders"
+    ],
+    "tags": [
+        "Mobility",
+        "Stretching",
+        "Balance"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

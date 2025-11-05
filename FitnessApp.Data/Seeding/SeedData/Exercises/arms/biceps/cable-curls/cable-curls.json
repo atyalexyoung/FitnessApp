@@ -1,0 +1,13 @@
+{
+    "id": "cable-curls",
+    "name": "Cable Curls",
+    "description": "Bicep curls using cable to maintain constant tension through the movement.",
+    "bodyParts": [
+        "Biceps"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

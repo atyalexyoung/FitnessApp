@@ -1,0 +1,14 @@
+{
+    "id": "cable-flys",
+    "name": "Cable Flys",
+    "description": "A cable-based isolation exercise that maintains constant tension on the chest throughout the movement.",
+    "bodyParts": [
+        "Chest",
+        "Deltoids"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

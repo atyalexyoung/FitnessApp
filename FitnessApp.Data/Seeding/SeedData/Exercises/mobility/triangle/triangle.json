@@ -1,0 +1,19 @@
+{
+    "id": "triangle",
+    "name": "Triangle Pose",
+    "description": "Yoga pose targeting hamstring, groin, spine, and shoulder mobility while enhancing balance.",
+    "bodyParts": [
+        "Hamstrings",
+        "Glutes",
+        "Hip Flexors",
+        "Shoulders",
+        "Thoracic Spine"
+    ],
+    "tags": [
+        "Mobility",
+        "Stretching",
+        "Balance"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

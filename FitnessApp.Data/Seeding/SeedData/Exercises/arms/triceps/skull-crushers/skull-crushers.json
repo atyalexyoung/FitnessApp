@@ -1,0 +1,13 @@
+{
+    "id": "skull-crushers",
+    "name": "Skull Crushers",
+    "description": "A lying tricep extension targeting all heads, performed with barbell, dumbbells, or EZ bar.",
+    "bodyParts": [
+        "Triceps"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

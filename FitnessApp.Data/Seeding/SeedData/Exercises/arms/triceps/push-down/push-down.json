@@ -1,0 +1,13 @@
+{
+    "id": "push-down",
+    "name": "Tricep Push-Down",
+    "description": "A cable exercise that isolates the triceps, allowing controlled contraction throughout the range of motion.",
+    "bodyParts": [
+        "Triceps"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

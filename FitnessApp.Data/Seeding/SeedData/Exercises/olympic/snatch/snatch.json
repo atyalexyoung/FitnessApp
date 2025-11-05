@@ -1,0 +1,20 @@
+{
+    "id": "snatch",
+    "name": "Snatch",
+    "description": "Explosive lift moving barbell from floor to overhead in one motion, emphasizing speed and mobility.",
+    "bodyParts": [
+        "Quads",
+        "Hamstrings",
+        "Glutes",
+        "Lats",
+        "Deltoids",
+        "Traps",
+        "Abdominals"
+    ],
+    "tags": [
+        "Strength",
+        "OlympicLifting"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

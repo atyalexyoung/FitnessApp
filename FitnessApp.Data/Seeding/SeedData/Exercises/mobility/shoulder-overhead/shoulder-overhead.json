@@ -1,0 +1,16 @@
+{
+    "id": "shoulder-overhead",
+    "name": "Shoulder Overhead Stretch",
+    "description": "Stretching anterior deltoids, lats, and thoracic spine.",
+    "bodyParts": [
+        "Deltoids",
+        "Lats",
+        "Thoracic Spine"
+    ],
+    "tags": [
+        "Stretching",
+        "Mobility"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

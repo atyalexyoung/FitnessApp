@@ -1,0 +1,19 @@
+{
+    "id": "jump-squat",
+    "name": "Jump Squat",
+    "description": "Explosive plyometric movement targeting quads, glutes, and calves, improving power and cardio fitness.",
+    "bodyParts": [
+        "Quads",
+        "Glutes",
+        "Hamstrings",
+        "Calves"
+    ],
+    "tags": [
+        "Cardio",
+        "HIIT",
+        "Plyometrics",
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

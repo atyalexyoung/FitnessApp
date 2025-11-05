@@ -1,0 +1,15 @@
+{
+    "id": "cable-reverse-flys",
+    "name": "Cable Reverse Flys",
+    "description": "An isolation movement for rear delts using cables for consistent tension and control.",
+    "bodyParts": [
+        "Deltoids",
+        "Rhomboids",
+        "Traps"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

@@ -1,0 +1,14 @@
+{
+    "id": "cable-hip-extensions",
+    "name": "Cable Hip Extensions",
+    "description": "Hip extension exercise using cable machine, can be performed in multiple angles to target glutes.",
+    "bodyParts": [
+        "Glutes",
+        "Hamstrings"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

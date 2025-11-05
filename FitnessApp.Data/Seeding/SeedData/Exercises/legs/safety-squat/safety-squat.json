@@ -1,0 +1,16 @@
+{
+    "id": "safety-squat",
+    "name": "Safety Squat",
+    "description": "Barbell squat variation using safety squat bar to reduce shoulder stress, targets quads, glutes, and upper back.",
+    "bodyParts": [
+        "Quads",
+        "Glutes",
+        "LowerBack"
+    ],
+    "tags": [
+        "Strength",
+        "Powerlifting"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

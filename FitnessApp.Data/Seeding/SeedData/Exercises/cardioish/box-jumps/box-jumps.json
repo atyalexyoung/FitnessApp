@@ -1,0 +1,20 @@
+{
+    "id": "box-jumps",
+    "name": "Box Jumps",
+    "description": "Explosive plyometric exercise focusing on lower body power, agility, and cardiovascular conditioning.",
+    "bodyParts": [
+        "Quads",
+        "Glutes",
+        "Hamstrings",
+        "Calves"
+    ],
+    "tags": [
+        "Cardio",
+        "HIIT",
+        "Plyometrics",
+        "Strength",
+        "Agility"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

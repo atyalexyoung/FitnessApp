@@ -1,0 +1,16 @@
+{
+    "id": "box-stepups",
+    "name": "Box Step-Ups",
+    "description": "Unilateral leg exercise stepping onto box, targeting quads, glutes, and balance.",
+    "bodyParts": [
+        "Quads",
+        "Glutes",
+        "Hamstrings"
+    ],
+    "tags": [
+        "Strength",
+        "Balance"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

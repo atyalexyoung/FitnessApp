@@ -1,0 +1,15 @@
+{
+    "id": "kickstands",
+    "name": "Kickstands",
+    "description": "Single-leg stability exercise focusing on glutes and hamstrings, often performed as a balance/hip hinge movement.",
+    "bodyParts": [
+        "Glutes",
+        "Hamstrings"
+    ],
+    "tags": [
+        "Strength",
+        "Balance"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

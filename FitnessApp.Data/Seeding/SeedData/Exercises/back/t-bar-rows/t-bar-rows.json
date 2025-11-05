@@ -1,0 +1,17 @@
+{
+    "id": "t-bar-rows",
+    "name": "T-Bar Rows",
+    "description": "A compound horizontal pulling exercise targeting mid-back and lats, often performed with chest supported or free-standing.",
+    "bodyParts": [
+        "Rhomboids",
+        "Lats",
+        "Traps",
+        "Deltoids"
+    ],
+    "tags": [
+        "Strength",
+        "Powerlifting"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

@@ -1,0 +1,18 @@
+{
+    "id": "stair-master",
+    "name": "Stair Master",
+    "description": "Cardio machine exercise mimicking stair climbing for lower-body endurance and conditioning.",
+    "bodyParts": [
+        "Quads",
+        "Glutes",
+        "Hamstrings",
+        "Calves"
+    ],
+    "tags": [
+        "Cardio",
+        "Endurance",
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

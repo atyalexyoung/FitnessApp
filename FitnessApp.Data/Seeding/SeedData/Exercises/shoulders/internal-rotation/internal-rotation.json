@@ -1,0 +1,14 @@
+{
+    "id": "internal-rotation",
+    "name": "Internal Rotation",
+    "description": "A rotator cuff exercise targeting subscapularis to maintain shoulder stability and prevent injury.",
+    "bodyParts": [
+        "Deltoids"
+    ],
+    "tags": [
+        "Strength",
+        "Rehab"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

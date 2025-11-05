@@ -1,0 +1,16 @@
+{
+    "id": "romanian-deadlift",
+    "name": "Romanian Deadlift",
+    "description": "A hip hinge movement focusing on hamstrings, glutes, and lower back.",
+    "bodyParts": [
+        "Hamstrings",
+        "Glutes",
+        "LowerBack"
+    ],
+    "tags": [
+        "Strength",
+        "Powerlifting"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

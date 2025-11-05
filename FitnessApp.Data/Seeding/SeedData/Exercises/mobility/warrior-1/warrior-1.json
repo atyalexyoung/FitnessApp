@@ -1,0 +1,20 @@
+{
+    "id": "warrior-1",
+    "name": "Warrior 1",
+    "description": "Yoga lunge pose enhancing hip flexor, quadriceps, hamstring, shoulder, and thoracic mobility.",
+    "bodyParts": [
+        "Glutes",
+        "Quads",
+        "Hip Flexors",
+        "Hamstrings",
+        "Shoulders",
+        "Thoracic Spine"
+    ],
+    "tags": [
+        "Mobility",
+        "Stretching",
+        "Balance"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

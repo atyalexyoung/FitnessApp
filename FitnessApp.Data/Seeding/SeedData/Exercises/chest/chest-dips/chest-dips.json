@@ -1,0 +1,16 @@
+{
+    "id": "chest-dips",
+    "name": "Chest Dips",
+    "description": "A bodyweight exercise focusing on lower chest and triceps, performed on parallel bars with forward lean for chest emphasis.",
+    "bodyParts": [
+        "Chest",
+        "Triceps",
+        "Deltoids"
+    ],
+    "tags": [
+        "Bodyweight",
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

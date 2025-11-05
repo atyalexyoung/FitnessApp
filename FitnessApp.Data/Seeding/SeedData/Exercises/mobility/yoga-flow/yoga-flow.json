@@ -1,0 +1,24 @@
+{
+    "id": "yoga-flow",
+    "name": "Yoga Flow",
+    "description": "Dynamic sequence of yoga poses designed to improve flexibility, mobility, balance, and mind-body coordination.",
+    "bodyParts": [
+        "Shoulders",
+        "Chest",
+        "Back",
+        "Abdominals",
+        "Hip Flexors",
+        "Glutes",
+        "Quads",
+        "Hamstrings",
+        "Calves"
+    ],
+    "tags": [
+        "Mobility",
+        "Stretching",
+        "Balance",
+        "Core"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

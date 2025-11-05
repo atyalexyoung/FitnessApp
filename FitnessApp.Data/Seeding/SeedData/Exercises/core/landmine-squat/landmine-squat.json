@@ -1,0 +1,19 @@
+{
+    "id": "landmine-squat",
+    "name": "Landmine Squat",
+    "description": "Squat variation using a landmine barbell to increase core activation while strengthening legs and glutes.",
+    "bodyParts": [
+        "Quads",
+        "Glutes",
+        "Abdominals",
+        "LowerBack"
+    ],
+    "tags": [
+        "Core",
+        "Strength",
+        "Legs",
+        "Weight"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

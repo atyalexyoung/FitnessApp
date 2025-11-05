@@ -1,0 +1,17 @@
+{
+    "id": "landmine-press",
+    "name": "Landmine Press",
+    "description": "Shoulder and core exercise using a landmine barbell for pressing while stabilizing the trunk.",
+    "bodyParts": [
+        "Shoulders",
+        "Abdominals",
+        "Obliques"
+    ],
+    "tags": [
+        "Core",
+        "Strength",
+        "Weight"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

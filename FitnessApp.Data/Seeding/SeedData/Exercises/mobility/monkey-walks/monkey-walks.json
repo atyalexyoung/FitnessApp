@@ -1,0 +1,20 @@
+{
+    "id": "monkey-walk",
+    "name": "Monkey Walk",
+    "description": "Dynamic hip and hamstring mobility movement improving coordination, flexibility, and balance.",
+    "bodyParts": [
+        "Hip Flexors",
+        "Hamstrings",
+        "Glutes",
+        "Shoulders",
+        "Thoracic Spine"
+    ],
+    "tags": [
+        "Mobility",
+        "Stretching",
+        "Balance",
+        "Core"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

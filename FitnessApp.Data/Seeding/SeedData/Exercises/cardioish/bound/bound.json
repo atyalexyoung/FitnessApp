@@ -1,0 +1,20 @@
+{
+    "id": "bound",
+    "name": "Bounding",
+    "description": "Alternating long strides or hops to increase horizontal leg power, agility, and cardiovascular capacity.",
+    "bodyParts": [
+        "Quads",
+        "Glutes",
+        "Hamstrings",
+        "Calves"
+    ],
+    "tags": [
+        "Cardio",
+        "HIIT",
+        "Plyometrics",
+        "Strength",
+        "Agility"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

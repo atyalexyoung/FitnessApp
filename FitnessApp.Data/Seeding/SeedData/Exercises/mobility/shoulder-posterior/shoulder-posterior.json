@@ -1,0 +1,17 @@
+{
+    "id": "shoulder-posterior",
+    "name": "Shoulder Posterior Stretch",
+    "description": "Stretch for posterior deltoid, rhomboids, and triceps.",
+    "bodyParts": [
+        "Deltoids",
+        "Traps",
+        "Rhomboids",
+        "Triceps"
+    ],
+    "tags": [
+        "Stretching",
+        "Mobility"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

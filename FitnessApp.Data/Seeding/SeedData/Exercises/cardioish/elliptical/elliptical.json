@@ -1,0 +1,20 @@
+{
+    "id": "elliptical",
+    "name": "Elliptical",
+    "description": "Low-impact cardio machine simulating running motion to build cardiovascular endurance and leg strength.",
+    "bodyParts": [
+        "Quads",
+        "Glutes",
+        "Hamstrings",
+        "Calves",
+        "Deltoids",
+        "Biceps"
+    ],
+    "tags": [
+        "Cardio",
+        "Endurance",
+        "LowImpact"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

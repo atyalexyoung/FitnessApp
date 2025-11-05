@@ -1,0 +1,16 @@
+{
+    "id": "neck-bridge",
+    "name": "Neck Bridge",
+    "description": "Advanced exercise targeting posterior neck muscles, upper traps, and spinal stabilizers.",
+    "bodyParts": [
+        "Neck",
+        "Traps",
+        "LowerBack"
+    ],
+    "tags": [
+        "Strength",
+        "Mobility"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

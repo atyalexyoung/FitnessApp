@@ -1,0 +1,18 @@
+{
+    "id": "incline-walking",
+    "name": "Incline Walking",
+    "description": "Walking on a treadmill or surface with an incline to increase intensity and engage glutes and hamstrings.",
+    "bodyParts": [
+        "Quads",
+        "Glutes",
+        "Hamstrings",
+        "Calves"
+    ],
+    "tags": [
+        "Cardio",
+        "Endurance",
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

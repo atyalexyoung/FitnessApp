@@ -1,0 +1,18 @@
+{
+    "id": "halos",
+    "name": "Halos",
+    "description": "Shoulder and thoracic mobility exercise performed with a weight around the head to improve rotation and stability.",
+    "bodyParts": [
+        "Shoulders",
+        "Traps",
+        "Deltoids",
+        "Thoracic Spine"
+    ],
+    "tags": [
+        "Mobility",
+        "Stretching",
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

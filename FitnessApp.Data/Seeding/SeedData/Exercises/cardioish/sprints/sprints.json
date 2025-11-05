@@ -1,0 +1,20 @@
+{
+    "id": "sprints",
+    "name": "Sprints",
+    "description": "High-intensity running over short distances to improve speed, power, and cardiovascular capacity.",
+    "bodyParts": [
+        "Quads",
+        "Glutes",
+        "Hamstrings",
+        "Calves",
+        "Abdominals"
+    ],
+    "tags": [
+        "Cardio",
+        "Speed",
+        "Power",
+        "HIIT"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

@@ -1,0 +1,17 @@
+{
+    "id": "leg-swings",
+    "name": "Leg Swings",
+    "description": "Dynamic hip mobility and leg warm-up.",
+    "bodyParts": [
+        "Hip Flexors",
+        "Hamstrings",
+        "Glutes",
+        "Quads"
+    ],
+    "tags": [
+        "Stretching",
+        "Mobility"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

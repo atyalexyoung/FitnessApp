@@ -1,0 +1,14 @@
+{
+    "id": "decline-dumbbell-bench-press",
+    "name": "Decline Dumbbell Bench Press",
+    "description": "A dumbbell pressing exercise on a decline bench that targets the lower chest while allowing greater range of motion and joint freedom.",
+    "bodyParts": [
+        "Chest",
+        "Triceps"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

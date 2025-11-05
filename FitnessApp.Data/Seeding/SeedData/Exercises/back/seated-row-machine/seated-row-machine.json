@@ -1,0 +1,16 @@
+{
+    "id": "seated-row-machine",
+    "name": "Seated Row Machine",
+    "description": "A stable horizontal pulling exercise emphasizing mid-back development with minimal lower back strain.",
+    "bodyParts": [
+        "Rhomboids",
+        "Traps",
+        "Lats",
+        "Biceps"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

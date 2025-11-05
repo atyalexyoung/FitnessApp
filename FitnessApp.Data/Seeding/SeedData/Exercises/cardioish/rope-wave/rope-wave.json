@@ -1,0 +1,22 @@
+{
+    "id": "rope-wave",
+    "name": "Rope Wave",
+    "description": "Full-body conditioning using battle ropes for cardiovascular and muscular endurance.",
+    "bodyParts": [
+        "Deltoids",
+        "Biceps",
+        "Forearms",
+        "Abdominals",
+        "Quads",
+        "Glutes"
+    ],
+    "tags": [
+        "Cardio",
+        "HIIT",
+        "Strength",
+        "Endurance",
+        "Agility"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

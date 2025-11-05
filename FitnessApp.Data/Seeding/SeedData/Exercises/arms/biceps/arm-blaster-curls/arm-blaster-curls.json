@@ -1,0 +1,13 @@
+{
+    "id": "arm-blaster-curls",
+    "name": "Arm Blaster Curls",
+    "description": "Barbell curls performed with an arm blaster to keep elbows pinned and isolate the biceps.",
+    "bodyParts": [
+        "Biceps"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

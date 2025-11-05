@@ -1,0 +1,13 @@
+{
+    "id": "pec-deck",
+    "name": "Pec Deck",
+    "description": "A machine-based fly movement that isolates the chest and provides guided resistance for safe hypertrophy training.",
+    "bodyParts": [
+        "Chest"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

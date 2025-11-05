@@ -1,0 +1,13 @@
+{
+    "id": "calf-press",
+    "name": "Calf Press",
+    "description": "Calf exercise performed on leg press machine to target gastrocnemius and soleus.",
+    "bodyParts": [
+        "Calves"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

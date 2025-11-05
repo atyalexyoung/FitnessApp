@@ -1,0 +1,20 @@
+{
+    "id": "vertical-chop",
+    "name": "Vertical Chop",
+    "description": "Overhead to floor medicine ball chop for core strength, rotation, and cardio endurance.",
+    "bodyParts": [
+        "Obliques",
+        "Abdominals",
+        "Deltoids",
+        "Glutes",
+        "Quads"
+    ],
+    "tags": [
+        "Cardio",
+        "Core",
+        "HIIT",
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

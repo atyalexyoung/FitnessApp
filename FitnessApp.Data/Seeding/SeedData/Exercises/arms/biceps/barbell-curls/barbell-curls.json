@@ -1,0 +1,13 @@
+{
+    "id": "barbell-curls",
+    "name": "Barbell Curls",
+    "description": "Classic barbell curl for overall biceps strength and mass.",
+    "bodyParts": [
+        "Biceps"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

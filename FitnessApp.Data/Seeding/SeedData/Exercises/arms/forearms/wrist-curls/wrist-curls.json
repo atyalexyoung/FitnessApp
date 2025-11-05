@@ -1,0 +1,13 @@
+{
+    "id": "wrist-curls",
+    "name": "Wrist Curls",
+    "description": "Strengthens forearm flexors using barbell, dumbbell, or cable.",
+    "bodyParts": [
+        "Forearms"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

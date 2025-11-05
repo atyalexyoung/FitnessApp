@@ -1,0 +1,15 @@
+{
+    "id": "chin-up",
+    "name": "Chin-Up",
+    "description": "A bodyweight vertical pulling exercise with underhand grip, emphasizing biceps and lower portion of lats while still engaging upper back.",
+    "bodyParts": [
+        "Lats",
+        "Biceps"
+    ],
+    "tags": [
+        "Bodyweight",
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

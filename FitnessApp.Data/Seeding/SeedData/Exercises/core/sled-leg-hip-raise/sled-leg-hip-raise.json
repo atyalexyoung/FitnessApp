@@ -1,0 +1,17 @@
+{
+    "id": "sled-leg-hip-raise",
+    "name": "Sled Leg Hip Raise",
+    "description": "Weighted core exercise performed by lifting legs while anchored to sled, focusing on lower abdominals and hip flexors.",
+    "bodyParts": [
+        "Abdominals",
+        "Hip Flexors",
+        "LowerBack"
+    ],
+    "tags": [
+        "Core",
+        "Strength",
+        "Weight"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

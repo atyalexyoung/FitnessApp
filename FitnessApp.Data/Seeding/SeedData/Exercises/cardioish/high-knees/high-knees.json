@@ -1,0 +1,21 @@
+{
+    "id": "high-knees",
+    "name": "High Knees",
+    "description": "Cardio-intensive drill raising knees quickly to hip level to improve speed, coordination, and endurance.",
+    "bodyParts": [
+        "Quads",
+        "Glutes",
+        "Hip Flexors",
+        "Calves",
+        "Abdominals"
+    ],
+    "tags": [
+        "Cardio",
+        "Bodyweight",
+        "HIIT",
+        "Speed",
+        "Endurance"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

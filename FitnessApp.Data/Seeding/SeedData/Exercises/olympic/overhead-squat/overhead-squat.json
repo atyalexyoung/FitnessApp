@@ -1,0 +1,20 @@
+{
+    "id": "overhead-squat",
+    "name": "Overhead Squat",
+    "description": "Squat with barbell held overhead, improving shoulder mobility, core stability, and leg strength.",
+    "bodyParts": [
+        "Quads",
+        "Hamstrings",
+        "Glutes",
+        "Deltoids",
+        "Traps",
+        "Abdominals"
+    ],
+    "tags": [
+        "Strength",
+        "OlympicLifting",
+        "Mobility"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

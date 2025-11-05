@@ -1,0 +1,16 @@
+{
+    "id": "leg-raises",
+    "name": "Leg Raises",
+    "description": "Core exercise targeting the lower abdominals and hip flexors with controlled leg lifts while lying flat.",
+    "bodyParts": [
+        "Abdominals",
+        "Hip Flexors"
+    ],
+    "tags": [
+        "Core",
+        "Strength",
+        "Bodyweight"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

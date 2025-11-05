@@ -1,0 +1,16 @@
+{
+    "id": "arms-circles",
+    "name": "Arms Circles",
+    "description": "Dynamic shoulder warm-up improving mobility and circulation.",
+    "bodyParts": [
+        "Deltoids",
+        "Shoulders",
+        "Traps"
+    ],
+    "tags": [
+        "Stretching",
+        "Mobility"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

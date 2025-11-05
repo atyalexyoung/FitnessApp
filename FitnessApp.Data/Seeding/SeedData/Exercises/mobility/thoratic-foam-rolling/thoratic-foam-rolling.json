@@ -1,0 +1,18 @@
+{
+    "id": "thoracic-foam-rolling",
+    "name": "Thoracic Foam Rolling",
+    "description": "Self-myofascial release for thoracic spine to improve upper back mobility and posture.",
+    "bodyParts": [
+        "Back",
+        "Trapezius",
+        "Rhomboids",
+        "Shoulders"
+    ],
+    "tags": [
+        "Mobility",
+        "Stretching",
+        "Recovery"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

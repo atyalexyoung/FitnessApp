@@ -1,0 +1,17 @@
+{
+    "id": "sled-push",
+    "name": "Sled Push",
+    "description": "Full-body conditioning and leg strength exercise pushing weighted sled over distance.",
+    "bodyParts": [
+        "Quads",
+        "Glutes",
+        "Hamstrings",
+        "Calves"
+    ],
+    "tags": [
+        "Strength",
+        "Endurance"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

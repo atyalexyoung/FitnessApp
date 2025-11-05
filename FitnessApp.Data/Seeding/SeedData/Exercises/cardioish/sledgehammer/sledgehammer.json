@@ -1,0 +1,23 @@
+{
+    "id": "sledgehammer",
+    "name": "Sledgehammer Swings",
+    "description": "High-intensity full-body conditioning swinging sledgehammer onto tire to build strength, power, and endurance.",
+    "bodyParts": [
+        "Deltoids",
+        "Biceps",
+        "Forearms",
+        "Abdominals",
+        "Obliques",
+        "Glutes",
+        "Quads"
+    ],
+    "tags": [
+        "Cardio",
+        "HIIT",
+        "Strength",
+        "Plyometrics",
+        "Agility"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

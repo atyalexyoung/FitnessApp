@@ -1,0 +1,14 @@
+{
+    "id": "external-rotation",
+    "name": "External Rotation",
+    "description": "A rotator cuff exercise targeting the infraspinatus and teres minor to improve shoulder stability and health.",
+    "bodyParts": [
+        "Deltoids"
+    ],
+    "tags": [
+        "Strength",
+        "Rehab"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

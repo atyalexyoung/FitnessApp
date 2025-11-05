@@ -1,0 +1,21 @@
+{
+    "id": "kettlebell-1-arm-swing",
+    "name": "Kettlebell 1-Arm Swing",
+    "description": "Unilateral kettlebell swing emphasizing hip power, grip, and cardiovascular conditioning.",
+    "bodyParts": [
+        "Glutes",
+        "Hamstrings",
+        "LowerBack",
+        "Deltoids",
+        "Forearms",
+        "Obliques"
+    ],
+    "tags": [
+        "Cardio",
+        "Strength",
+        "HIIT",
+        "Plyometrics"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

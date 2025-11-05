@@ -1,0 +1,17 @@
+{
+    "id": "thoracic-extension",
+    "name": "Thoracic Extension",
+    "description": "Mobility exercise targeting thoracic spine extension and posture improvement.",
+    "bodyParts": [
+        "Thoracic Spine",
+        "Shoulders",
+        "Back"
+    ],
+    "tags": [
+        "Mobility",
+        "Stretching",
+        "Posture"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

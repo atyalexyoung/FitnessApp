@@ -1,0 +1,22 @@
+{
+    "id": "farmers-carry",
+    "name": "Farmer's Carry",
+    "description": "Loaded carry exercise for grip, core, and overall conditioning. Walk while holding heavy weights at your sides.",
+    "bodyParts": [
+        "Forearms",
+        "Traps",
+        "Deltoids",
+        "Abdominals",
+        "Glutes",
+        "Quads",
+        "Hamstrings"
+    ],
+    "tags": [
+        "Cardio",
+        "Strength",
+        "Endurance",
+        "Core"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

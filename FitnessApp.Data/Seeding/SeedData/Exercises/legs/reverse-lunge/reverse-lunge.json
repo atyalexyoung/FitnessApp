@@ -1,0 +1,16 @@
+{
+    "id": "reverse-lunge",
+    "name": "Reverse Lunge",
+    "description": "Unilateral leg exercise stepping backward to target quads, glutes, and hamstrings while reducing knee stress.",
+    "bodyParts": [
+        "Quads",
+        "Glutes",
+        "Hamstrings"
+    ],
+    "tags": [
+        "Strength",
+        "Balance"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

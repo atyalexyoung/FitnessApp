@@ -1,0 +1,20 @@
+{
+    "id": "warrior-2",
+    "name": "Warrior 2",
+    "description": "Yoga lunge pose emphasizing hip and groin mobility, leg stability, and shoulder engagement.",
+    "bodyParts": [
+        "Glutes",
+        "Quads",
+        "Hip Flexors",
+        "Adductors",
+        "Shoulders",
+        "Thoracic Spine"
+    ],
+    "tags": [
+        "Mobility",
+        "Stretching",
+        "Balance"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

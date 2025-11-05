@@ -1,0 +1,16 @@
+{
+    "id": "achilles-opener",
+    "name": "Achilles Opener",
+    "description": "Ankle and Achilles mobility stretch improving dorsiflexion and calf flexibility.",
+    "bodyParts": [
+        "Calves",
+        "Achilles",
+        "Ankles"
+    ],
+    "tags": [
+        "Mobility",
+        "Stretching"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

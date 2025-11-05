@@ -1,0 +1,16 @@
+{
+    "id": "hyperextension",
+    "name": "Hyperextension",
+    "description": "A bodyweight posterior chain exercise focusing on lower back, glutes, and hamstrings, typically performed on a hyperextension bench.",
+    "bodyParts": [
+        "LowerBack",
+        "Glutes",
+        "Hamstrings"
+    ],
+    "tags": [
+        "Strength",
+        "Rehab"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

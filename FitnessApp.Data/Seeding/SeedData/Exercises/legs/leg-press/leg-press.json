@@ -1,0 +1,15 @@
+{
+    "id": "leg-press",
+    "name": "Leg Press",
+    "description": "Machine-based squat alternative targeting quads, glutes, and hamstrings with controlled motion.",
+    "bodyParts": [
+        "Quads",
+        "Glutes",
+        "Hamstrings"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

@@ -1,0 +1,20 @@
+{
+    "id": "worlds-greatest-stretch",
+    "name": "World's Greatest Stretch",
+    "description": "Dynamic full-body mobility stretch that opens hips, hamstrings, thoracic spine, and shoulders, often used as a warm-up or flow movement.",
+    "bodyParts": [
+        "Hip Flexors",
+        "Glutes",
+        "Hamstrings",
+        "Thoracic Spine",
+        "Shoulders"
+    ],
+    "tags": [
+        "Mobility",
+        "Stretching",
+        "Balance",
+        "Core"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

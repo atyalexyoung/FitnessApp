@@ -1,0 +1,16 @@
+{
+    "id": "reverse-grip-bench",
+    "name": "Reverse Grip Bench Press",
+    "description": "A barbell bench variation using an underhand grip to target the upper chest and triceps.",
+    "bodyParts": [
+        "Chest",
+        "Triceps",
+        "Deltoids"
+    ],
+    "tags": [
+        "Strength",
+        "Powerlifting"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

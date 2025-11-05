@@ -1,0 +1,15 @@
+{
+    "id": "decline-barbell-bench-press",
+    "name": "Decline Barbell Bench Press",
+    "description": "A bench press variation performed on a decline angle to emphasize the lower chest and triceps.",
+    "bodyParts": [
+        "Chest",
+        "Triceps"
+    ],
+    "tags": [
+        "Strength",
+        "Powerlifting"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

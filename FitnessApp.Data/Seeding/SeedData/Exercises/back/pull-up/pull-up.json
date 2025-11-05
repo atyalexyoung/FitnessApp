@@ -1,0 +1,16 @@
+{
+    "id": "pull-up",
+    "name": "Pull-Up",
+    "description": "A bodyweight vertical pulling exercise that primarily strengthens the lats, with secondary engagement of the biceps and upper back.",
+    "bodyParts": [
+        "Lats",
+        "Biceps",
+        "Rhomboids"
+    ],
+    "tags": [
+        "Bodyweight",
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

@@ -1,0 +1,14 @@
+{
+    "id": "glute-ham-raise",
+    "name": "Glute Ham Raise",
+    "description": "Hamstring and glute isolation exercise performed on GHR machine, emphasizing knee flexion and hip extension.",
+    "bodyParts": [
+        "Hamstrings",
+        "Glutes"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

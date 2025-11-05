@@ -1,0 +1,21 @@
+{
+    "id": "kettlebell-jerks",
+    "name": "Kettlebell Jerks",
+    "description": "Dynamic overhead press using kettlebell, combining shoulder mobility, power, and hip drive.",
+    "bodyParts": [
+        "Shoulders",
+        "Glutes",
+        "Quads",
+        "Hip Flexors",
+        "Traps",
+        "Abdominals"
+    ],
+    "tags": [
+        "Mobility",
+        "Strength",
+        "Explosive",
+        "Power"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

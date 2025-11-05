@@ -1,0 +1,13 @@
+{
+    "id": "rope-thing",
+    "name": "Rope Forearm Exercise",
+    "description": "Forearm and grip exercise using rope for pulling or twisting motions.",
+    "bodyParts": [
+        "Forearms"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

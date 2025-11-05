@@ -1,0 +1,17 @@
+{
+    "id": "bike",
+    "name": "Bike",
+    "description": "Stationary or outdoor cycling for cardiovascular endurance and lower-body conditioning.",
+    "bodyParts": [
+        "Quads",
+        "Glutes",
+        "Hamstrings",
+        "Calves"
+    ],
+    "tags": [
+        "Cardio",
+        "Endurance"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

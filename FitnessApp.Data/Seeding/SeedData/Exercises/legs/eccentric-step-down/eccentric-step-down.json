@@ -1,0 +1,15 @@
+{
+    "id": "eccentric-step-down",
+    "name": "Eccentric Step-Down",
+    "description": "Single-leg exercise emphasizing controlled lowering to strengthen quads and improve balance.",
+    "bodyParts": [
+        "Quads",
+        "Glutes"
+    ],
+    "tags": [
+        "Strength",
+        "Balance"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

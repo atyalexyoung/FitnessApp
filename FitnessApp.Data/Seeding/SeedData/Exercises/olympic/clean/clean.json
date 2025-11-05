@@ -1,0 +1,19 @@
+{
+    "id": "clean",
+    "name": "Clean",
+    "description": "Explosive lift pulling barbell from floor to front rack position.",
+    "bodyParts": [
+        "Quads",
+        "Hamstrings",
+        "Glutes",
+        "Lats",
+        "Traps",
+        "Abdominals"
+    ],
+    "tags": [
+        "Strength",
+        "OlympicLifting"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

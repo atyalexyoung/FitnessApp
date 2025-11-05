@@ -1,0 +1,13 @@
+{
+    "id": "hip-abduction-machine",
+    "name": "Hip Abduction Machine",
+    "description": "Isolation exercise for outer thighs and glutes using machine to strengthen hip abductors.",
+    "bodyParts": [
+        "Glutes"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

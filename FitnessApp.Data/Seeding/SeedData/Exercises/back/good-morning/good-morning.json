@@ -1,0 +1,17 @@
+{
+    "id": "good-morning",
+    "name": "Good Morning",
+    "description": "A hip-hinge movement that strengthens the posterior chain, particularly hamstrings and lower back, while engaging lats for bar stability.",
+    "bodyParts": [
+        "LowerBack",
+        "Hamstrings",
+        "Glutes",
+        "Lats"
+    ],
+    "tags": [
+        "Strength",
+        "Powerlifting"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

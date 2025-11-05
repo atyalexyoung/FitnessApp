@@ -1,0 +1,21 @@
+{
+    "id": "warrior-3",
+    "name": "Warrior 3",
+    "description": "Balancing yoga pose focusing on hip, glute, hamstring, and core strength while improving overall balance.",
+    "bodyParts": [
+        "Glutes",
+        "Hamstrings",
+        "Hip Flexors",
+        "Core",
+        "Shoulders",
+        "Thoracic Spine"
+    ],
+    "tags": [
+        "Mobility",
+        "Stretching",
+        "Balance",
+        "Core"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

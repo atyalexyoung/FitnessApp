@@ -1,0 +1,15 @@
+{
+    "id": "standing-quad-stretch",
+    "name": "Standing Quad Stretch",
+    "description": "Static stretch targeting quadriceps and hip flexors.",
+    "bodyParts": [
+        "Quads",
+        "Hip Flexors"
+    ],
+    "tags": [
+        "Stretching",
+        "Mobility"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

@@ -1,0 +1,19 @@
+{
+    "id": "shoulder-car",
+    "name": "Shoulder CAR (Controlled Articular Rotation)",
+    "description": "Slow, controlled rotational movement to improve shoulder joint mobility and stability.",
+    "bodyParts": [
+        "Shoulders",
+        "Trapezius",
+        "Deltoids",
+        "Chest",
+        "Lats"
+    ],
+    "tags": [
+        "Mobility",
+        "Stretching",
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

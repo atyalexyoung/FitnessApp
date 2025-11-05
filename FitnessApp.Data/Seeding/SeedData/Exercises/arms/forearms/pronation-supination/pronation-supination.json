@@ -1,0 +1,13 @@
+{
+    "id": "pronation-supination",
+    "name": "Pronation/Supination",
+    "description": "Forearm rotation exercise using dumbbell or cable to train pronators and supinators.",
+    "bodyParts": [
+        "Forearms"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

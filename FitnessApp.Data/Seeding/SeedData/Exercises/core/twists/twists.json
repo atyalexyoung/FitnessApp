@@ -1,0 +1,17 @@
+{
+    "id": "twists",
+    "name": "Core Twists",
+    "description": "Rotational core exercise targeting obliques and transverse abdominis using cable, dumbbell, medicine ball, or bodyweight variations.",
+    "bodyParts": [
+        "Obliques",
+        "Abdominals"
+    ],
+    "tags": [
+        "Core",
+        "Strength",
+        "Bodyweight",
+        "Endurance"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

@@ -1,0 +1,22 @@
+{
+    "id": "jump-rope",
+    "name": "Jump Rope",
+    "description": "Classic cardiovascular exercise improving stamina, coordination, and lower body endurance.",
+    "bodyParts": [
+        "Calves",
+        "Quads",
+        "Hamstrings",
+        "Glutes",
+        "Deltoids",
+        "Forearms",
+        "Abdominals"
+    ],
+    "tags": [
+        "Cardio",
+        "Endurance",
+        "Agility",
+        "Bodyweight"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

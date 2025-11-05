@@ -1,0 +1,17 @@
+{
+    "id": "flutter-kicks",
+    "name": "Flutter Kicks",
+    "description": "Core exercise targeting lower abdominals, hip flexors, and endurance through alternating leg lifts.",
+    "bodyParts": [
+        "Abdominals",
+        "Hip Flexors"
+    ],
+    "tags": [
+        "Core",
+        "Strength",
+        "Bodyweight",
+        "Endurance"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

@@ -1,0 +1,15 @@
+{
+    "id": "upright-row",
+    "name": "Upright Row",
+    "description": "A compound shoulder exercise targeting traps and medial delts through vertical pulling of the bar or dumbbells.",
+    "bodyParts": [
+        "Deltoids",
+        "Traps",
+        "Biceps"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

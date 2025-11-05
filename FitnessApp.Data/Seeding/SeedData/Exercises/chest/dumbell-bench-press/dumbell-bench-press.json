@@ -1,0 +1,16 @@
+{
+    "id": "dumbbell-bench-press",
+    "name": "Dumbbell Bench Press",
+    "description": "A free-weight pressing exercise targeting the chest, triceps, and shoulders while improving unilateral stability and range of motion.",
+    "bodyParts": [
+        "Chest",
+        "Triceps",
+        "Deltoids"
+    ],
+    "tags": [
+        "Strength",
+        "Bodyweight"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

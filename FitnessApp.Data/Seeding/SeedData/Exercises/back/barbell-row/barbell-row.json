@@ -1,0 +1,17 @@
+{
+    "id": "barbell-row",
+    "name": "Barbell Row",
+    "description": "A heavy compound pulling movement targeting the mid-back, lats, and rhomboids while also engaging the rear delts and lower back for stability.",
+    "bodyParts": [
+        "Lats",
+        "Rhomboids",
+        "LowerBack",
+        "Deltoids"
+    ],
+    "tags": [
+        "Strength",
+        "Powerlifting"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

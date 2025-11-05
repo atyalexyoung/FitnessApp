@@ -1,0 +1,13 @@
+{
+    "id": "leg-extensions",
+    "name": "Leg Extensions",
+    "description": "Isolation exercise for quadriceps using machine to strengthen knee extensors.",
+    "bodyParts": [
+        "Quads"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

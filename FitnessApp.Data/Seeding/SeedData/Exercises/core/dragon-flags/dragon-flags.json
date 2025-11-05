@@ -1,0 +1,19 @@
+{
+    "id": "dragon-flags",
+    "name": "Dragon Flags",
+    "description": "Advanced core exercise emphasizing total body tension and lower/upper abdominal strength through controlled full-body lifts.",
+    "bodyParts": [
+        "Abdominals",
+        "Obliques",
+        "Hip Flexors",
+        "LowerBack"
+    ],
+    "tags": [
+        "Core",
+        "Strength",
+        "Bodyweight",
+        "Advanced"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

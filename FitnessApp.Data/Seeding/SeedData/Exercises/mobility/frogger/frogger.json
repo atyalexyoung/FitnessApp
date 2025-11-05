@@ -1,0 +1,19 @@
+{
+    "id": "frogger",
+    "name": "Frogger",
+    "description": "Dynamic stretch and mobility drill targeting hips, groin, and shoulders while enhancing coordination.",
+    "bodyParts": [
+        "Hip Flexors",
+        "Adductors",
+        "Glutes",
+        "Shoulders"
+    ],
+    "tags": [
+        "Mobility",
+        "Stretching",
+        "Balance",
+        "Core"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

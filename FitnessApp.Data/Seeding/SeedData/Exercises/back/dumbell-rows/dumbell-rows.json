@@ -1,0 +1,17 @@
+{
+    "id": "dumbbell-rows",
+    "name": "Dumbbell Rows",
+    "description": "A unilateral rowing movement that targets lats, rhomboids, and rear delts while improving balance and core stability.",
+    "bodyParts": [
+        "Lats",
+        "Rhomboids",
+        "Deltoids",
+        "LowerBack",
+        "Core"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

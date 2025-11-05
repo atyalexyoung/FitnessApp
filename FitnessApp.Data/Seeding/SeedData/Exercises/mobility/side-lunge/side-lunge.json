@@ -1,0 +1,17 @@
+{
+    "id": "side-lunge",
+    "name": "Side Lunge Stretch",
+    "description": "Targets inner thighs, hips, and adductors for mobility.",
+    "bodyParts": [
+        "Adductors",
+        "Hip Flexors",
+        "Glutes",
+        "Quads"
+    ],
+    "tags": [
+        "Stretching",
+        "Mobility"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

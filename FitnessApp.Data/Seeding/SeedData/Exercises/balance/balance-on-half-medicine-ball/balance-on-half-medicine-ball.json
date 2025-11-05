@@ -1,0 +1,18 @@
+{
+    "id": "balance-on-half-medicine-ball",
+    "name": "Balance on Half Medicine Ball",
+    "description": "Static balance exercise standing on a half medicine ball to improve ankle and core stability.",
+    "bodyParts": [
+        "Quads",
+        "Glutes",
+        "Abdominals",
+        "Calves"
+    ],
+    "tags": [
+        "Balance",
+        "Mobility",
+        "Core"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

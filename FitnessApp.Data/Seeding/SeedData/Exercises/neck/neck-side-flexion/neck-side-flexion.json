@@ -1,0 +1,15 @@
+{
+    "id": "neck-side-flexion",
+    "name": "Neck Side Flexion",
+    "description": "Lateral flexion movement targeting lateral neck muscles, including upper traps and sternocleidomastoid.",
+    "bodyParts": [
+        "Neck",
+        "Traps"
+    ],
+    "tags": [
+        "Mobility",
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

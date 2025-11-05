@@ -1,0 +1,19 @@
+{
+    "id": "split-jerk",
+    "name": "Split Jerk",
+    "description": "Overhead barbell lift using dip and split stance to stabilize heavy load.",
+    "bodyParts": [
+        "Quads",
+        "Hamstrings",
+        "Glutes",
+        "Deltoids",
+        "Traps",
+        "Abdominals"
+    ],
+    "tags": [
+        "Strength",
+        "OlympicLifting"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

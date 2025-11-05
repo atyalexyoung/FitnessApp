@@ -1,0 +1,21 @@
+{
+    "id": "turkish-get-ups",
+    "name": "Turkish Get-Ups",
+    "description": "Full-body mobility and strength exercise requiring controlled transitions from lying to standing with a weight overhead.",
+    "bodyParts": [
+        "Shoulders",
+        "Glutes",
+        "Quads",
+        "Hip Flexors",
+        "Abdominals",
+        "Traps"
+    ],
+    "tags": [
+        "Mobility",
+        "Strength",
+        "Bodyweight",
+        "Balance"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

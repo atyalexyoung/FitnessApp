@@ -1,0 +1,20 @@
+{
+    "id": "butt-kicks",
+    "name": "Butt Kicks",
+    "description": "Bodyweight exercise targeting hamstrings, calves, and cardiovascular endurance by kicking heels to glutes rapidly.",
+    "bodyParts": [
+        "Hamstrings",
+        "Calves",
+        "Glutes",
+        "Abdominals"
+    ],
+    "tags": [
+        "Cardio",
+        "Bodyweight",
+        "HIIT",
+        "Endurance",
+        "Speed"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

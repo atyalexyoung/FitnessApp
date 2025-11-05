@@ -1,0 +1,17 @@
+{
+    "id": "banded-hip-mobilization",
+    "name": "Banded Hip Mobilization",
+    "description": "Hip mobility exercise using resistance bands to open hip capsule and improve joint range of motion.",
+    "bodyParts": [
+        "Hip Flexors",
+        "Glutes",
+        "Adductors",
+        "Quads"
+    ],
+    "tags": [
+        "Mobility",
+        "Stretching"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

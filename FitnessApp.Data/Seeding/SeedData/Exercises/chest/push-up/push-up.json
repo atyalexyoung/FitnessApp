@@ -1,0 +1,17 @@
+{
+    "id": "push-up",
+    "name": "Push-Up",
+    "description": "A classic bodyweight pressing movement that strengthens the chest, shoulders, triceps, and core.",
+    "bodyParts": [
+        "Chest",
+        "Triceps",
+        "Deltoids",
+        "Core"
+    ],
+    "tags": [
+        "Bodyweight",
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

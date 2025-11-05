@@ -1,0 +1,16 @@
+{
+    "id": "barbell-bench-press",
+    "name": "Barbell Bench Press",
+    "description": "A foundational compound press that builds strength and mass in the chest, triceps, and shoulders. Commonly used in strength and powerlifting programs.",
+    "bodyParts": [
+        "Chest",
+        "Triceps",
+        "Deltoids"
+    ],
+    "tags": [
+        "Strength",
+        "Powerlifting"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

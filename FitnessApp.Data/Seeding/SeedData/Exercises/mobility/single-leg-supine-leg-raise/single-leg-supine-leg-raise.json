@@ -1,0 +1,18 @@
+{
+    "id": "single-leg-supine-leg-raise",
+    "name": "Single-Leg Supine Leg Raise",
+    "description": "Hip and hamstring mobility exercise performed lying on back while lifting one leg to improve flexibility and control.",
+    "bodyParts": [
+        "Hamstrings",
+        "Glutes",
+        "Hip Flexors",
+        "LowerBack"
+    ],
+    "tags": [
+        "Mobility",
+        "Stretching",
+        "Flexibility"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

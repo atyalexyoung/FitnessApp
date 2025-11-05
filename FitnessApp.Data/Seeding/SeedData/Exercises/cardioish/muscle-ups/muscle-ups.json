@@ -1,0 +1,21 @@
+{
+    "id": "muscle-ups",
+    "name": "Muscle-Ups",
+    "description": "Advanced bodyweight exercise combining pull-up and dip for explosive upper-body strength and cardiovascular conditioning.",
+    "bodyParts": [
+        "Lats",
+        "Biceps",
+        "Deltoids",
+        "Triceps",
+        "Chest",
+        "Abdominals"
+    ],
+    "tags": [
+        "Cardio",
+        "Strength",
+        "Bodyweight",
+        "HIIT"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

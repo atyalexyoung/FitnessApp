@@ -1,0 +1,17 @@
+{
+    "id": "spinal-twist",
+    "name": "Spinal Twist",
+    "description": "Seated or lying spinal rotation stretch for thoracic and lumbar mobility.",
+    "bodyParts": [
+        "Thoracic Spine",
+        "LowerBack",
+        "Obliques",
+        "Glutes"
+    ],
+    "tags": [
+        "Stretching",
+        "Mobility"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

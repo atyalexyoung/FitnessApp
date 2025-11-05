@@ -1,0 +1,19 @@
+{
+    "id": "wounded-bug",
+    "name": "Dead Bug",
+    "description": "Anti-extension core exercise improving abdominal stability and coordination while moving arms and legs independently.",
+    "bodyParts": [
+        "Abdominals",
+        "Obliques",
+        "Hip Flexors",
+        "LowerBack"
+    ],
+    "tags": [
+        "Core",
+        "Strength",
+        "Bodyweight",
+        "Mobility"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

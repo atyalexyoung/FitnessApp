@@ -1,0 +1,16 @@
+{
+    "id": "v-ups",
+    "name": "V-Ups",
+    "description": "Dynamic core exercise targeting upper and lower abdominals by lifting torso and legs simultaneously to form a V-shape.",
+    "bodyParts": [
+        "Abdominals",
+        "Hip Flexors"
+    ],
+    "tags": [
+        "Core",
+        "Strength",
+        "Bodyweight"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

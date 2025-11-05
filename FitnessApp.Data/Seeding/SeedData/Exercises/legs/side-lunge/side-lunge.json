@@ -1,0 +1,15 @@
+{
+    "id": "side-lunge",
+    "name": "Side Lunge",
+    "description": "Lateral leg exercise targeting quads, glutes, and inner thighs for unilateral strength and mobility.",
+    "bodyParts": [
+        "Quads",
+        "Glutes"
+    ],
+    "tags": [
+        "Strength",
+        "Balance"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

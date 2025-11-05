@@ -1,0 +1,14 @@
+{
+    "id": "hip-thrusts",
+    "name": "Hip Thrusts",
+    "description": "Glute-dominant exercise performed with shoulders on bench, barbell on hips, emphasizing hip extension.",
+    "bodyParts": [
+        "Glutes",
+        "Hamstrings"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

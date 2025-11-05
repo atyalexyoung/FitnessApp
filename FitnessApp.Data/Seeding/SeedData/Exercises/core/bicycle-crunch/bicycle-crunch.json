@@ -1,0 +1,18 @@
+{
+    "id": "bicycle-crunch",
+    "name": "Bicycle Crunch",
+    "description": "Dynamic core exercise targeting rectus abdominis and obliques with alternating elbow-to-knee motion.",
+    "bodyParts": [
+        "Abdominals",
+        "Obliques",
+        "Hip Flexors"
+    ],
+    "tags": [
+        "Core",
+        "Strength",
+        "Bodyweight",
+        "Endurance"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

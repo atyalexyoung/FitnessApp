@@ -1,0 +1,13 @@
+{
+    "id": "tricep-extension-machine",
+    "name": "Tricep Extension Machine",
+    "description": "A machine-based triceps isolation exercise for controlled motion and consistent tension.",
+    "bodyParts": [
+        "Triceps"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

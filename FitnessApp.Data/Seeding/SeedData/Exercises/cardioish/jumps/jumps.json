@@ -1,0 +1,20 @@
+{
+    "id": "jumps",
+    "name": "Plyometric Jumps",
+    "description": "Explosive vertical jumps to improve leg power, coordination, and cardiovascular conditioning.",
+    "bodyParts": [
+        "Quads",
+        "Glutes",
+        "Hamstrings",
+        "Calves"
+    ],
+    "tags": [
+        "Cardio",
+        "HIIT",
+        "Plyometrics",
+        "Strength",
+        "Agility"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

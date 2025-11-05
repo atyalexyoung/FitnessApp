@@ -1,0 +1,19 @@
+{
+    "id": "superman",
+    "name": "Superman",
+    "description": "Posterior chain activation exercise targeting lower back, glutes, and shoulders for strength and mobility.",
+    "bodyParts": [
+        "LowerBack",
+        "Glutes",
+        "Shoulders",
+        "Thoracic Spine"
+    ],
+    "tags": [
+        "Mobility",
+        "Stretching",
+        "Strength",
+        "Core"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

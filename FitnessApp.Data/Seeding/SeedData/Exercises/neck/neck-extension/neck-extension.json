@@ -1,0 +1,15 @@
+{
+    "id": "neck-extension",
+    "name": "Neck Extension",
+    "description": "Extension movement targeting posterior neck muscles and upper traps.",
+    "bodyParts": [
+        "Neck",
+        "Traps"
+    ],
+    "tags": [
+        "Mobility",
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

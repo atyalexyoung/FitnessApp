@@ -1,0 +1,15 @@
+{
+    "id": "wall-calf-stretch",
+    "name": "Wall Calf Stretch",
+    "description": "Static calf stretch targeting gastrocnemius and soleus muscles.",
+    "bodyParts": [
+        "Calves",
+        "Achilles"
+    ],
+    "tags": [
+        "Stretching",
+        "Mobility"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

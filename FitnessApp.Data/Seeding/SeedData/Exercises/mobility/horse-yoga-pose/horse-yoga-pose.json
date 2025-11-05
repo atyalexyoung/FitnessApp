@@ -1,0 +1,18 @@
+{
+    "id": "horse-yoga-pose",
+    "name": "Horse Yoga Pose",
+    "description": "Wide-legged squat yoga pose focusing on hip adductors, glutes, quads, and balance.",
+    "bodyParts": [
+        "Glutes",
+        "Quads",
+        "Adductors",
+        "Hip Flexors"
+    ],
+    "tags": [
+        "Mobility",
+        "Stretching",
+        "Balance"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

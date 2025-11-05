@@ -1,0 +1,14 @@
+{
+    "id": "hack-squat",
+    "name": "Hack Squat",
+    "description": "Machine squat targeting quads and glutes, safer for knees and back than barbell variations.",
+    "bodyParts": [
+        "Quads",
+        "Glutes"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

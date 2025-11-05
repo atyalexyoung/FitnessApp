@@ -1,0 +1,16 @@
+{
+    "id": "decline-sit-ups",
+    "name": "Decline Sit-Ups",
+    "description": "Weighted or bodyweight abdominal exercise on a decline bench targeting the upper and lower abs.",
+    "bodyParts": [
+        "Abdominals"
+    ],
+    "tags": [
+        "Core",
+        "Strength",
+        "Bodyweight",
+        "Weight"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

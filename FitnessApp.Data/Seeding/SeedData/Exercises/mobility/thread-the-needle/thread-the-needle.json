@@ -1,0 +1,18 @@
+{
+    "id": "thread-the-needle",
+    "name": "Thread the Needle",
+    "description": "Thoracic spine and shoulder mobility stretch performed on all fours, improving rotation and spinal flexibility.",
+    "bodyParts": [
+        "Thoracic Spine",
+        "Shoulders",
+        "Abdominals",
+        "Glutes"
+    ],
+    "tags": [
+        "Mobility",
+        "Stretching",
+        "Balance"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

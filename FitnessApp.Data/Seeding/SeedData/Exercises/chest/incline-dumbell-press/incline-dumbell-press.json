@@ -1,0 +1,16 @@
+{
+    "id": "incline-dumbbell-press",
+    "name": "Incline Dumbbell Press",
+    "description": "A dumbbell variation of the bench press emphasizing the upper chest and anterior shoulders through an inclined pressing angle.",
+    "bodyParts": [
+        "Chest",
+        "Deltoids",
+        "Triceps"
+    ],
+    "tags": [
+        "Strength",
+        "Bodyweight"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

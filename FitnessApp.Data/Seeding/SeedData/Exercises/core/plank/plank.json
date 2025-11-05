@@ -1,0 +1,19 @@
+{
+    "id": "plank",
+    "name": "Plank",
+    "description": "Isometric core exercise to build stability and endurance in the abdominals, obliques, and lower back.",
+    "bodyParts": [
+        "Abdominals",
+        "Obliques",
+        "LowerBack",
+        "Glutes"
+    ],
+    "tags": [
+        "Core",
+        "Strength",
+        "Endurance",
+        "Bodyweight"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

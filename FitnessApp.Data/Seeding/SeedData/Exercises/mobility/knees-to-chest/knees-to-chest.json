@@ -1,0 +1,16 @@
+{
+    "id": "knees-to-chest",
+    "name": "Knees to Chest",
+    "description": "Supine stretch for lower back, glutes, and hip mobility.",
+    "bodyParts": [
+        "LowerBack",
+        "Glutes",
+        "Hip Flexors"
+    ],
+    "tags": [
+        "Stretching",
+        "Mobility"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

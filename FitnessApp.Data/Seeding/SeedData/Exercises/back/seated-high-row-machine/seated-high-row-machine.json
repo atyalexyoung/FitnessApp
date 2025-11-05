@@ -1,0 +1,16 @@
+{
+    "id": "seated-high-row-machine",
+    "name": "Seated High Row Machine",
+    "description": "A machine-based horizontal pull targeting upper back muscles with stable support.",
+    "bodyParts": [
+        "Rhomboids",
+        "Traps",
+        "Deltoids",
+        "Lats"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

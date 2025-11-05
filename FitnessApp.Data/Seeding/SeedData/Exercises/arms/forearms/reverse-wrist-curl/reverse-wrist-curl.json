@@ -1,0 +1,13 @@
+{
+    "id": "reverse-wrist-curl",
+    "name": "Reverse Wrist Curl",
+    "description": "Strengthens forearm extensors using barbell, dumbbell, or cable.",
+    "bodyParts": [
+        "Forearms"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

@@ -1,0 +1,16 @@
+{
+    "id": "tricep-dips",
+    "name": "Tricep Dips",
+    "description": "A bodyweight tricep exercise performed on parallel bars or a bench, emphasizing triceps, chest, and front delts.",
+    "bodyParts": [
+        "Triceps",
+        "Chest",
+        "Deltoids"
+    ],
+    "tags": [
+        "Strength",
+        "Bodyweight"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

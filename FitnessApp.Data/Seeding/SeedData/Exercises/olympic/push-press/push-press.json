@@ -1,0 +1,19 @@
+{
+    "id": "push-press",
+    "name": "Push Press",
+    "description": "Overhead press using leg drive to move barbell overhead.",
+    "bodyParts": [
+        "Deltoids",
+        "Traps",
+        "Triceps",
+        "Quads",
+        "Glutes",
+        "Abdominals"
+    ],
+    "tags": [
+        "Strength",
+        "OlympicLifting"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

@@ -1,0 +1,13 @@
+{
+    "id": "dumbbell-curls",
+    "name": "Dumbbell Curls",
+    "description": "Classic bicep isolation exercise with supinated grip for overall bicep development.",
+    "bodyParts": [
+        "Biceps"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

@@ -1,0 +1,19 @@
+{
+    "id": "dead-hang",
+    "name": "Dead Hang",
+    "description": "Grip and shoulder mobility exercise improving scapular stability, grip strength, and thoracic extension.",
+    "bodyParts": [
+        "Shoulders",
+        "Forearms",
+        "Traps",
+        "Lats",
+        "Thoracic Spine"
+    ],
+    "tags": [
+        "Mobility",
+        "Stretching",
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

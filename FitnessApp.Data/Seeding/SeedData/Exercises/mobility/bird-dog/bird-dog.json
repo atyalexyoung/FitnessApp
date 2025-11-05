@@ -1,0 +1,19 @@
+{
+    "id": "bird-dog",
+    "name": "Bird Dog",
+    "description": "Core and spinal stability exercise enhancing balance, glute activation, and thoracic mobility.",
+    "bodyParts": [
+        "Core",
+        "Glutes",
+        "Thoracic Spine",
+        "LowerBack",
+        "Shoulders"
+    ],
+    "tags": [
+        "Mobility",
+        "Balance",
+        "Core"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

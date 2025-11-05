@@ -1,0 +1,17 @@
+{
+    "id": "walking",
+    "name": "Walking",
+    "description": "Low-intensity steady-state cardio focusing on overall health, fat burn, and joint-friendly movement.",
+    "bodyParts": [
+        "Quads",
+        "Glutes",
+        "Hamstrings",
+        "Calves"
+    ],
+    "tags": [
+        "Cardio",
+        "Endurance"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

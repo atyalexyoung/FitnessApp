@@ -1,0 +1,19 @@
+{
+    "id": "bear-walk",
+    "name": "Bear Walk",
+    "description": "Dynamic movement improving shoulder stability, core strength, and hip mobility.",
+    "bodyParts": [
+        "Shoulders",
+        "Core",
+        "Hip Flexors",
+        "Glutes"
+    ],
+    "tags": [
+        "Mobility",
+        "Stretching",
+        "Balance",
+        "Core"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

@@ -1,0 +1,20 @@
+{
+    "id": "broad-jump",
+    "name": "Broad Jump",
+    "description": "Horizontal explosive jump focusing on leg power and agility, improving lower body strength and cardio capacity.",
+    "bodyParts": [
+        "Quads",
+        "Glutes",
+        "Hamstrings",
+        "Calves"
+    ],
+    "tags": [
+        "Cardio",
+        "HIIT",
+        "Plyometrics",
+        "Strength",
+        "Agility"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

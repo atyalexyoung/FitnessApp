@@ -1,0 +1,13 @@
+{
+    "id": "dumbbell-kickbacks",
+    "name": "Dumbbell Kickbacks",
+    "description": "A tricep isolation movement performed by extending the arm behind the body while bent over.",
+    "bodyParts": [
+        "Triceps"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

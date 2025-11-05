@@ -1,0 +1,14 @@
+{
+    "id": "reverse-curls",
+    "name": "Reverse Curls",
+    "description": "Barbell or dumbbell curl with palms down, targeting brachioradialis and forearms along with biceps.",
+    "bodyParts": [
+        "Biceps",
+        "Forearms"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

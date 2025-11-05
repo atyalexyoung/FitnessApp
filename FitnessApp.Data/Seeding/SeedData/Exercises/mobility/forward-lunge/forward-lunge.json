@@ -1,0 +1,16 @@
+{
+    "id": "forward-lunge",
+    "name": "Forward Lunge Stretch",
+    "description": "Stretch targeting hip flexors, quads, and glutes.",
+    "bodyParts": [
+        "Hip Flexors",
+        "Quads",
+        "Glutes"
+    ],
+    "tags": [
+        "Stretching",
+        "Mobility"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

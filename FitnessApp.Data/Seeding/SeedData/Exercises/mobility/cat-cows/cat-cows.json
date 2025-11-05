@@ -1,0 +1,18 @@
+{
+    "id": "cat-cows",
+    "name": "Cat Cows",
+    "description": "Dynamic spinal mobility exercise improving thoracic and lumbar flexibility while engaging core and back muscles.",
+    "bodyParts": [
+        "Thoracic Spine",
+        "LowerBack",
+        "Abdominals",
+        "Shoulders"
+    ],
+    "tags": [
+        "Mobility",
+        "Stretching",
+        "Core"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

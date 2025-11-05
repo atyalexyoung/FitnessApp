@@ -1,0 +1,20 @@
+{
+    "id": "arch-chop",
+    "name": "Arch Chop",
+    "description": "Rotational core exercise using medicine ball to build oblique strength and cardiovascular endurance.",
+    "bodyParts": [
+        "Obliques",
+        "Abdominals",
+        "Deltoids",
+        "Glutes",
+        "Quads"
+    ],
+    "tags": [
+        "Cardio",
+        "Core",
+        "HIIT",
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

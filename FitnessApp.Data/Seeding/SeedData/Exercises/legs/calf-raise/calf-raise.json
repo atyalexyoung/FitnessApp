@@ -1,0 +1,13 @@
+{
+    "id": "calf-raise",
+    "name": "Calf Raise",
+    "description": "Standing calf raise variation using barbell, dumbbell, machine, smith, or donkey to target gastrocnemius.",
+    "bodyParts": [
+        "Calves"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

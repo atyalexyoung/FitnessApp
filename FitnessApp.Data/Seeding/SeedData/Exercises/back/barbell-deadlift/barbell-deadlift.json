@@ -1,0 +1,18 @@
+{
+    "id": "barbell-deadlift",
+    "name": "Barbell Deadlift",
+    "description": "A full-body compound lift that emphasizes posterior chain strength, including lower back, glutes, hamstrings, and lats for stabilization.",
+    "bodyParts": [
+        "LowerBack",
+        "Glutes",
+        "Hamstrings",
+        "Lats",
+        "Traps"
+    ],
+    "tags": [
+        "Strength",
+        "Powerlifting"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

@@ -1,0 +1,20 @@
+{
+    "id": "ladder-drills",
+    "name": "Ladder Drills",
+    "description": "Footwork and agility exercise using speed ladder to improve coordination, speed, and cardiovascular conditioning.",
+    "bodyParts": [
+        "Calves",
+        "Quads",
+        "Hamstrings",
+        "Glutes"
+    ],
+    "tags": [
+        "Cardio",
+        "HIIT",
+        "Agility",
+        "Speed",
+        "Endurance"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

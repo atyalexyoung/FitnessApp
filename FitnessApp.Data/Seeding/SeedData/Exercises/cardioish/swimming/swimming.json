@@ -1,0 +1,23 @@
+{
+    "id": "swimming",
+    "name": "Swimming",
+    "description": "Full-body, low-impact cardio exercise improving cardiovascular endurance and muscular conditioning.",
+    "bodyParts": [
+        "Deltoids",
+        "Lats",
+        "Chest",
+        "Glutes",
+        "Quads",
+        "Hamstrings",
+        "Calves",
+        "Abdominals"
+    ],
+    "tags": [
+        "Cardio",
+        "Endurance",
+        "LowImpact",
+        "FullBody"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

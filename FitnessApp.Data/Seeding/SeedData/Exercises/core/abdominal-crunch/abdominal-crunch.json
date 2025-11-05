@@ -1,0 +1,15 @@
+{
+    "id": "abdominal-crunch",
+    "name": "Abdominal Crunch",
+    "description": "Classic core exercise isolating the rectus abdominis to build strength and definition.",
+    "bodyParts": [
+        "Abdominals"
+    ],
+    "tags": [
+        "Core",
+        "Strength",
+        "Bodyweight"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

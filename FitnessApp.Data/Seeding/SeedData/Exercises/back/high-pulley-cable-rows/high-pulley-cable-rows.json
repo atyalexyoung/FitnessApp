@@ -1,0 +1,16 @@
+{
+    "id": "high-pulley-cable-rows",
+    "name": "High Pulley Cable Rows",
+    "description": "A cable exercise focusing on upper-back muscles including traps, rhomboids, and rear delts with a horizontal pulling path.",
+    "bodyParts": [
+        "Traps",
+        "Rhomboids",
+        "Deltoids",
+        "Lats"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

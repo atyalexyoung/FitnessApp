@@ -1,0 +1,14 @@
+{
+    "id": "overhead-dumbbell-press",
+    "name": "Overhead Dumbbell Press",
+    "description": "A dumbbell variant of the overhead press that allows independent arm movement, targeting delts and triceps.",
+    "bodyParts": [
+        "Deltoids",
+        "Triceps"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

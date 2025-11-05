@@ -1,0 +1,16 @@
+{
+    "id": "pretzel",
+    "name": "Pretzel Stretch",
+    "description": "Seated spinal and hip stretch combining glute, hip, and thoracic rotation.",
+    "bodyParts": [
+        "Glutes",
+        "Hip Flexors",
+        "Thoracic Spine"
+    ],
+    "tags": [
+        "Stretching",
+        "Mobility"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

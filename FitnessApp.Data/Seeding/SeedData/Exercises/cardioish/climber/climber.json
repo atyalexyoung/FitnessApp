@@ -1,0 +1,21 @@
+{
+    "id": "climber",
+    "name": "Mountain Climber",
+    "description": "Dynamic bodyweight exercise targeting core, shoulders, and cardiovascular endurance through rapid alternating knee drives.",
+    "bodyParts": [
+        "Abdominals",
+        "Obliques",
+        "Deltoids",
+        "Quads",
+        "Glutes"
+    ],
+    "tags": [
+        "Cardio",
+        "Bodyweight",
+        "HIIT",
+        "Core",
+        "Agility"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

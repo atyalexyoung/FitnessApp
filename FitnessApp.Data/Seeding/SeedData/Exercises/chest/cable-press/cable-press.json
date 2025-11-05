@@ -1,0 +1,15 @@
+{
+    "id": "cable-press",
+    "name": "Cable Press",
+    "description": "A cable-based pressing exercise providing constant tension throughout the pressing motion for balanced chest development.",
+    "bodyParts": [
+        "Chest",
+        "Deltoids",
+        "Triceps"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

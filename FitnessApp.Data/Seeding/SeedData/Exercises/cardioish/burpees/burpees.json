@@ -1,0 +1,23 @@
+{
+    "id": "burpees",
+    "name": "Burpees",
+    "description": "Full-body conditioning exercise combining squat, plank, push-up, and jump for cardio and muscular endurance.",
+    "bodyParts": [
+        "Chest",
+        "Triceps",
+        "Deltoids",
+        "Quads",
+        "Glutes",
+        "Hamstrings",
+        "Calves",
+        "Abdominals"
+    ],
+    "tags": [
+        "Cardio",
+        "Strength",
+        "Bodyweight",
+        "HIIT"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

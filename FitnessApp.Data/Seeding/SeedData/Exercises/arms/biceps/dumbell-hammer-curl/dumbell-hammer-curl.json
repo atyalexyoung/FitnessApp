@@ -1,0 +1,14 @@
+{
+    "id": "dumbbell-hammer-curl",
+    "name": "Dumbbell Hammer Curl",
+    "description": "A bicep curl variation with neutral grip, targeting brachialis and biceps brachii for thicker arms.",
+    "bodyParts": [
+        "Biceps",
+        "Forearms"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

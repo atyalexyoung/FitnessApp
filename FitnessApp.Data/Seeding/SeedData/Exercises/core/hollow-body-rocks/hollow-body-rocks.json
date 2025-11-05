@@ -1,0 +1,19 @@
+{
+    "id": "hollow-body-rocks",
+    "name": "Hollow Body Rocks",
+    "description": "Dynamic hollow body exercise with gentle rocking motion for core engagement and stability.",
+    "bodyParts": [
+        "Abdominals",
+        "Obliques",
+        "Hip Flexors",
+        "LowerBack"
+    ],
+    "tags": [
+        "Core",
+        "Strength",
+        "Bodyweight",
+        "Endurance"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

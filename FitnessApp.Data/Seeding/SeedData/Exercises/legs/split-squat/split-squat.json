@@ -1,0 +1,15 @@
+{
+    "id": "split-squat",
+    "name": "Split Squat",
+    "description": "Static unilateral squat for quads and glutes, performed with back leg elevated or flat on ground.",
+    "bodyParts": [
+        "Quads",
+        "Glutes"
+    ],
+    "tags": [
+        "Strength",
+        "Balance"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

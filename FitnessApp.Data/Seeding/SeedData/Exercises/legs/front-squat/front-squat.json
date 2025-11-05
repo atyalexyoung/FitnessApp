@@ -1,0 +1,16 @@
+{
+    "id": "front-squat",
+    "name": "Front Squat",
+    "description": "Barbell squat with barbell on front delts, emphasizing quads and upper back.",
+    "bodyParts": [
+        "Quads",
+        "Glutes",
+        "LowerBack"
+    ],
+    "tags": [
+        "Strength",
+        "Powerlifting"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

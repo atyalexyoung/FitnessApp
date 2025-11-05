@@ -1,0 +1,13 @@
+{
+    "id": "grip-squeezers",
+    "name": "Grip Squeezers",
+    "description": "Hand and forearm exercise using grippers to improve grip strength and forearm endurance.",
+    "bodyParts": [
+        "Forearms"
+    ],
+    "tags": [
+        "Strength"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

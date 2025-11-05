@@ -1,0 +1,19 @@
+{
+    "id": "jumping-jacks",
+    "name": "Jumping Jacks",
+    "description": "Classic cardio exercise improving heart rate, coordination, and full-body movement.",
+    "bodyParts": [
+        "Deltoids",
+        "Calves",
+        "Quads",
+        "Glutes",
+        "Abdominals"
+    ],
+    "tags": [
+        "Cardio",
+        "Bodyweight",
+        "Endurance"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

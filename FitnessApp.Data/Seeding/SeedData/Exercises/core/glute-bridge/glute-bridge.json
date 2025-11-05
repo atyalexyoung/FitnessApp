@@ -1,0 +1,19 @@
+{
+    "id": "glute-bridge",
+    "name": "Glute Bridge",
+    "description": "Hip extension and core exercise to strengthen glutes, hamstrings, and lower back while engaging core.",
+    "bodyParts": [
+        "Glutes",
+        "Hamstrings",
+        "LowerBack",
+        "Abdominals"
+    ],
+    "tags": [
+        "Core",
+        "Strength",
+        "Bodyweight",
+        "Glutes"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}

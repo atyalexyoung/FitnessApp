@@ -1,0 +1,22 @@
+{
+    "id": "medicine-ball-slams",
+    "name": "Medicine Ball Slams",
+    "description": "Explosive full-body movement lifting and slamming a medicine ball to build power, core strength, and cardio conditioning.",
+    "bodyParts": [
+        "Deltoids",
+        "Lats",
+        "Abdominals",
+        "Obliques",
+        "Glutes",
+        "Quads"
+    ],
+    "tags": [
+        "Cardio",
+        "Core",
+        "HIIT",
+        "Strength",
+        "Plyometrics"
+    ],
+    "imageUrls": [],
+    "videoUrls": []
+}
