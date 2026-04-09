@@ -8,5 +8,4 @@ Currently developing the front-end in Angular to be able to properly do CRUD ope
 
 For this iteration, it is ASP .NET for the backend, Angular for the front-end, PostgreSQL via EF for the data storage. 
 
-If you want to develop, you can fill out a real .env in place of the example, get all the dependencies, and go. It may be more complex than that, but I honestly don't feel like writing more detailed instructions until the project is more fleshed out but it's not too complex as is.
-
+If you want to develop, you should be able to copy the example .env file and use the proper values, get all the dependencies, and go. 
